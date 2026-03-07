@@ -1,1 +1,7 @@
 art_data.json
+node_modules/
+web/node_modules/
+web/dist/
+.env
+*.pyc
+__pycache__/

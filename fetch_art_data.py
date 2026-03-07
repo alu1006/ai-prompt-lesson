@@ -23,7 +23,7 @@ SELECT ?movement ?movementLabel (COUNT(?painting) AS ?paintingCount) WHERE {
   ?painting wdt:P135 ?movement.
   ?movement wdt:P31/wdt:P279* wd:Q968159.
   SERVICE wikibase:label {
-    bd:serviceParam wikibase:language "zh-hant,zh,en".
+    bd:serviceParam wikibase:language "zh-hant,zh-tw,zh-hk,en".
   }
 }
 GROUP BY ?movement ?movementLabel
@@ -32,17 +32,23 @@ LIMIT 20
 """
 
 ARTISTS_PAINTINGS_QUERY_TEMPLATE = """
-SELECT ?artist ?artistLabel ?painting ?paintingLabel ?image WHERE {{
+SELECT ?artist ?artistLabel ?artistEn ?wikiEn ?painting ?paintingLabel ?image WHERE {{
   VALUES ?movement {{ wd:{movement_id} }}
   ?painting wdt:P31 wd:Q3305213.
   ?painting wdt:P135 ?movement.
   ?painting wdt:P170 ?artist.
-  OPTIONAL {{ ?painting wdt:P18 ?image. }}
+  ?painting wdt:P18 ?image.
+  OPTIONAL {{ ?artist rdfs:label ?artistEn. FILTER(LANG(?artistEn) = "en") }}
+  OPTIONAL {{
+    ?wikiEnPage schema:about ?artist ;
+                schema:isPartOf <https://en.wikipedia.org/> ;
+                schema:name ?wikiEn.
+  }}
   SERVICE wikibase:label {{
-    bd:serviceParam wikibase:language "zh-hant,zh,en".
+    bd:serviceParam wikibase:language "zh-hant,zh-tw,zh-hk,en".
   }}
 }}
-LIMIT 200
+LIMIT 300
 """
 
 
@@ -81,6 +87,26 @@ def extract_qid(uri: str) -> str:
     return uri.rsplit("/", 1)[-1]
 
 
+# Wikidata items that only have zh (simplified) labels, not zh-hant/zh-tw.
+# Provide authoritative Traditional Chinese names directly.
+TRADITIONAL_ZH_OVERRIDE = {
+    "Q610687":   "威尼斯畫派",
+    "Q1474884":  "文藝復興全盛期",
+    "Q189458":   "學院藝術",
+    "Q10822316": "具體藝術",
+    "Q42934":    "立體主義",
+    "Q281108":   "素人藝術",
+}
+
+# Wikidata's zh-hant labels for these artists incorrectly contain simplified characters.
+# Provide authoritative Traditional Chinese names directly.
+TRADITIONAL_ZH_ARTIST_OVERRIDE = {
+    "Q296":    "克勞德·莫內",   # Claude Monet  (劳→勞, 奈→內)
+    "Q159758": "約瑟夫·馬洛德·威廉·透納",  # J. M. W. Turner  (约→約)
+    "Q41264":  "約翰尼斯·維梅爾",  # Johannes Vermeer  (约→約)
+}
+
+
 def extract_value(binding: dict, key: str) -> str:
     return binding.get(key, {}).get("value", "")
 
@@ -96,6 +122,7 @@ def fetch_movements(limit: int = 20) -> list[dict]:
         if not uri:
             continue
         qid = extract_qid(uri)
+        label = TRADITIONAL_ZH_OVERRIDE.get(qid, label)
         movements.append({
             "id": qid,
             "label": label,
@@ -114,9 +141,17 @@ def fetch_artists_and_paintings(movement_id: str) -> list[dict]:
         painting_uri = extract_value(row, "painting")
         if not artist_uri or not painting_uri:
             continue
+        artist_id = extract_qid(artist_uri)
+        # Skip anonymous / blank-node artists (genid URIs)
+        import re
+        if not re.match(r'^Q\d+$', artist_id):
+            continue
+        wiki_en = extract_value(row, "wikiEn")
         results.append({
-            "artist_id": extract_qid(artist_uri),
+            "artist_id": artist_id,
             "artist_label": extract_value(row, "artistLabel"),
+            "artist_en": extract_value(row, "artistEn"),
+            "wiki_en": wiki_en,
             "painting_id": extract_qid(painting_uri),
             "painting_label": extract_value(row, "paintingLabel"),
             "image_url": extract_value(row, "image"),
@@ -153,12 +188,28 @@ def build_output(movements: list[dict], per_movement_data: dict) -> dict:
         for row in per_movement_data.get(mid, []):
             aid = row["artist_id"]
             if aid not in artists_map:
-                azh, aen = split_label(row["artist_label"])
-                print(f"    Artist: {azh or aen} ({aid})")
+                label = row["artist_label"]
+                en_label = row.get("artist_en", "") or ""
+                wiki_en = row.get("wiki_en", "") or ""
+                # name_zh: Chinese label preferred; name_en: always English
+                if is_chinese(label):
+                    azh = label
+                    aen = en_label if en_label else label
+                else:
+                    azh = label
+                    aen = en_label if en_label else label
+                azh = TRADITIONAL_ZH_ARTIST_OVERRIDE.get(aid, azh)
+                wiki_url = (
+                    f"https://en.wikipedia.org/wiki/{wiki_en.replace(' ', '_')}"
+                    if wiki_en
+                    else f"https://www.wikidata.org/wiki/{aid}"
+                )
+                print(f"    Artist: {azh} / {aen} ({aid})")
                 artists_map[aid] = {
                     "id": aid,
                     "name_en": aen,
                     "name_zh": azh,
+                    "wiki": wiki_url,
                     "paintings": [],
                 }
             artist = artists_map[aid]
