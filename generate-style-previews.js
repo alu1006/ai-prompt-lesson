@@ -61,6 +61,66 @@ const STYLE_PROMPTS = [
     id: 'photorealistic',
     prompt: 'A cat sitting gracefully, ultra photorealistic photography, hyperdetailed fur texture, studio lighting, perfect focus, award-winning wildlife photograph, 8K quality',
   },
+
+  // ── 風格關鍵詞 ──
+  {
+    id: 'doodle',
+    prompt: 'A cat sitting gracefully, casual doodle art style, loose hand-drawn lines, scribbled texture, ballpoint pen on notebook paper, playful and spontaneous',
+  },
+  {
+    id: 'naive-art',
+    prompt: 'A cat sitting gracefully, naive folk art style, childlike drawing, simple shapes, flat bright colors, innocent and primitive aesthetic, outsider art',
+  },
+  {
+    id: 'sticker-art',
+    prompt: 'A cute cat sitting gracefully, die-cut sticker design, thick black outline, vibrant flat colors, isolated on pure white background, kawaii sticker style',
+  },
+  {
+    id: 'lofi-cartoon',
+    prompt: 'A cat sitting gracefully, lo-fi cartoon style, flat simple shapes, slightly imperfect wobbly lines, muted pastel palette, cozy and unpretentious illustration',
+  },
+  {
+    id: 'line-drawing',
+    prompt: 'A cat sitting gracefully, minimalist single-line outline drawing, clean simple contour lines only, no fill, no shading, pure black on white, elegant line art',
+  },
+  {
+    id: 'quirky-cute',
+    prompt: 'A quirky cat sitting gracefully, weird kawaii character art, oddly proportioned features, unexpected details, charming imperfections, unique personality, cute but strange illustration',
+  },
+  {
+    id: 'draft',
+    prompt: 'A cat sitting gracefully, rough pencil draft sketch, construction lines visible, multiple overlapping gesture lines, unfinished concept sketch, technical drawing feel',
+  },
+
+  // ── 筆觸關鍵詞 ──
+  {
+    id: 'textured-brush',
+    prompt: 'A cat sitting gracefully, heavily textured brushstrokes, visible dry brush paint texture, impasto thick paint marks, tactile surface quality, expressive brushwork',
+  },
+  {
+    id: 'rough-lines',
+    prompt: 'A cat sitting gracefully, rough scratchy hand-drawn lines, raw unpolished strokes, irregular jagged edges, energetic quick mark-making, gritty linework',
+  },
+  {
+    id: 'hand-drawn',
+    prompt: 'A cat sitting gracefully, warm hand-drawn illustration, organic imperfect natural lines, human touch quality, felt-tip pen on paper, heartfelt and personal',
+  },
+  {
+    id: 'ink-brush',
+    prompt: 'A cat sitting gracefully, expressive ink brush painting, bold sumi ink brushstrokes, varying pressure creates thick and thin lines, calligraphic energy, East Asian brush art',
+  },
+  {
+    id: 'charcoal',
+    prompt: 'A cat sitting gracefully, charcoal drawing on textured paper, smudged tones, soft blended shadows, rich dark values, powdery grainy texture, classical drawing technique',
+  },
+  {
+    id: 'grainy',
+    prompt: 'A cat sitting gracefully, risograph print style, heavy film grain noise, halftone dot texture, muted limited color palette, analog printing imperfections, lo-fi zine aesthetic',
+  },
+  {
+    id: 'uneven-lines',
+    prompt: 'A cat sitting gracefully, expressive variable line weight illustration, thick and thin non-uniform strokes, calligraphic linework, gestural mark-making, bold dynamic linework',
+  },
 ]
 
 const sleep = ms => new Promise(r => setTimeout(r, ms))
