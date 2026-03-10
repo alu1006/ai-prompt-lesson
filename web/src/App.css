@@ -77,7 +77,7 @@ body {
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 0.72rem; font-weight: 700;
-  background: #222230;
+  background: #f0ece4;
   border: 1px solid #bbb;
   flex-shrink: 0;
 }
@@ -236,7 +236,7 @@ body {
 }
 
 .intro-note {
-  background: #1a1a28;
+  background: #f0ece4;
   border: 1px solid #e5e1d8;
   border-radius: 8px;
   padding: 0.85rem 1rem;
@@ -284,8 +284,8 @@ body {
   border-radius: 12px;
   flex-shrink: 0;
 }
-.level-0 { background: #2e1a1a; color: #c0392b; }
-.level-1 { background: #2e2416; color: #8b6914; }
+.level-0 { background: #fde8e8; color: #c0392b; }
+.level-1 { background: #fdf3dc; color: #8b6914; }
 .level-2 { background: #d4edda; color: #2d6a4f; }
 
 .prompt-visual-text {
@@ -428,7 +428,7 @@ body {
 .guess-title { font-size: 0.9rem; font-weight: 600; color: #1a1714; }
 
 .btn-reveal {
-  background: #1d2e1d;
+  background: #d4edda;
   border: 1px solid #3a5a3a;
   color: #2d6a4f;
   border-radius: 6px;
@@ -439,7 +439,7 @@ body {
   transition: background 0.15s;
   align-self: flex-start;
 }
-.btn-reveal:hover { background: #243524; }
+.btn-reveal:hover { background: #b8dcbe; }
 
 .btn-original {
   display: inline-block;
@@ -476,7 +476,7 @@ body {
   align-self: flex-start;
 }
 .guess-badge.ai   { background: #d4edda; color: #2d6a4f; }
-.guess-badge.real { background: #2e2416; color: #8b6914; }
+.guess-badge.real { background: #fdf3dc; color: #8b6914; }
 
 .guess-explanation {
   font-size: 0.8rem;
@@ -547,7 +547,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  background: #1d2e1d;
+  background: #d4edda;
   border: 1px solid #3a5a3a;
   border-radius: 8px;
   padding: 0.65rem 1rem;
@@ -649,7 +649,7 @@ body {
 }
 
 .no-data-note {
-  background: #1a1820;
+  background: #f0ece4;
   border: 1px solid #bbb;
   border-radius: 8px;
   padding: 0.8rem 1rem;
@@ -744,7 +744,7 @@ body {
 .artist-tile-en { font-size: 0.72rem; color: #5559a5; }
 
 .selected-style-bar {
-  background: #1d2e1d;
+  background: #d4edda;
   border: 1px solid #3a5a3a;
   border-radius: 8px;
   padding: 0.65rem 1rem;
@@ -905,7 +905,7 @@ body {
 
 .btn-copy {
   margin-left: auto;
-  background: #1d2e1d;
+  background: #d4edda;
   border: 1px solid #3a5a3a;
   color: #2d6a4f;
   border-radius: 6px;
@@ -916,7 +916,7 @@ body {
   transition: background 0.15s;
   white-space: nowrap;
 }
-.btn-copy:hover { background: #243524; }
+.btn-copy:hover { background: #b8dcbe; }
 
 .prompt-block-text {
   padding: 1rem;
@@ -932,7 +932,7 @@ body {
 }
 
 .prompt-tips {
-  background: #1a1a28;
+  background: #f0ece4;
   border: 1px solid #e5e1d8;
   border-radius: 10px;
   padding: 1rem 1.2rem;

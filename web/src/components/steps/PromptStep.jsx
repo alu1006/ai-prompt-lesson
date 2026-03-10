@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 function buildPrompts(selection) {
-  const { subject, style, action, scene, angle, lighting, mood, product } = selection
+  const { subject, styles = [], action, scene, angle, lighting, mood, product } = selection
 
   // ── 中文 prompt ──
   const zhParts = []
@@ -9,7 +9,7 @@ function buildPrompts(selection) {
   if (action?.zh) zhParts.push(action.zh)
   if (scene?.zh) zhParts.push(`在${scene.zh}`)
   if (angle?.zh) zhParts.push(`${angle.zh}視角`)
-  if (style?.label_zh) zhParts.push(`以${style.label_zh}風格`)
+  if (styles.length > 0) zhParts.push(`以${styles.map(s => s.label_zh).join('、')}風格`)
   if (lighting?.zh) zhParts.push(lighting.zh)
   if (mood?.zh) zhParts.push(`${mood.zh}氛圍`)
   if (product?.id && product.id !== 'none') zhParts.push(`去背、適合印製於${product.name_zh}`)
@@ -20,7 +20,7 @@ function buildPrompts(selection) {
   if (action?.en) enParts.push(action.en)
   if (scene?.en) enParts.push(scene.en)
   if (angle?.en) enParts.push(angle.en)
-  if (style?.label_en) enParts.push(style.label_en)
+  if (styles.length > 0) enParts.push(styles.map(s => s.label_en).join(', '))
   if (lighting?.en) enParts.push(lighting.en)
   if (mood?.en) enParts.push(mood.en)
   if (product?.prompt_en) enParts.push(product.prompt_en)
@@ -57,7 +57,7 @@ export default function PromptStep({ selection, onPrev, onSave }) {
       title: selection.subject || '我的 Prompt',
       tags: [
         selection.subject && { label: '主體', value: selection.subject },
-        selection.style && { label: '風格', value: selection.style.label_zh },
+        ...(selection.styles?.length > 0 ? selection.styles.map(s => ({ label: '風格', value: s.label_zh })) : []),
         selection.action && { label: '動作', value: selection.action.zh },
         selection.scene && { label: '場景', value: selection.scene.zh },
         selection.angle && { label: '鏡頭', value: selection.angle.zh },
@@ -73,7 +73,7 @@ export default function PromptStep({ selection, onPrev, onSave }) {
 
   const tags = [
     selection.subject && { label: '主體', value: selection.subject },
-    selection.style && { label: '風格', value: selection.style.label_zh },
+    ...(selection.styles?.length > 0 ? selection.styles.map(s => ({ label: '風格', value: s.label_zh })) : []),
     selection.action && { label: '動作', value: selection.action.zh },
     selection.scene && { label: '場景', value: selection.scene.zh },
     selection.angle && { label: '鏡頭', value: selection.angle.zh },

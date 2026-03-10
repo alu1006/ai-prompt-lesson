@@ -22,7 +22,11 @@ export default function App() {
   const [step, setStep]       = useState(0)
   const [artData, setArtData] = useState(null)
   const [subject, setSubject] = useState('')
-  const [style,   setStyle]   = useState(null)
+  const [styles,  setStyles]  = useState([])
+
+  const toggleStyle = (s) => setStyles(prev =>
+    prev.find(x => x.id === s.id) ? prev.filter(x => x.id !== s.id) : [...prev, s]
+  )
   const [details, setDetails] = useState(EMPTY_DETAILS)
   const [product, setProduct] = useState(null)
   const [showSaved, setShowSaved] = useState(false)
@@ -55,7 +59,7 @@ export default function App() {
   const prev = () => setStep(s => Math.max(s - 1, 0))
   const goTo = (i) => setStep(i)
 
-  const selection = { subject, style, ...details, product }
+  const selection = { subject, styles, ...details, product }
 
   return (
     <div className="wizard-app">
@@ -113,8 +117,8 @@ export default function App() {
         {step === 2 && (
           <StyleStep
             artData={artData}
-            selected={style}
-            onSelect={setStyle}
+            selected={styles}
+            onSelect={toggleStyle}
             onNext={next}
             onPrev={prev}
           />

@@ -4,7 +4,8 @@ import { ERA_ORDER, MOVEMENT_ERA } from '../../data/eraData.js'
 import { AMERICAN_ANIMATION, JAPANESE_ANIME } from '../../data/customPanels.js'
 import MovementCard from '../MovementCard.jsx'
 
-export default function StyleStep({ artData, selected, onSelect, onNext, onPrev }) {
+export default function StyleStep({ artData, selected = [], onSelect, onNext, onPrev }) {
+  const isSelected = (id) => selected.some(s => s.id === id)
   const [tab, setTab] = useState('intuitive') // 'intuitive' | 'movement'
 
   // Group movements by era
@@ -45,12 +46,7 @@ export default function StyleStep({ artData, selected, onSelect, onNext, onPrev 
   }
 
   const handleIntuitiveSelect = (style) => {
-    onSelect(selected?.id === style.id ? null : {
-      id: style.id,
-      label_zh: style.name_zh,
-      label_en: style.name_en,
-      type: 'intuitive',
-    })
+    onSelect({ id: style.id, label_zh: style.name_zh, label_en: style.name_en, type: 'intuitive' })
   }
 
   return (
@@ -80,11 +76,11 @@ export default function StyleStep({ artData, selected, onSelect, onNext, onPrev 
       {tab === 'intuitive' && (
         <div className="style-grid">
           {INTUITIVE_STYLES.map(style => {
-            const isSelected = selected?.id === style.id
+            const active = isSelected(style.id)
             return (
               <button
                 key={style.id}
-                className={`style-tile${isSelected ? ' selected' : ''}`}
+                className={`style-tile${active ? ' selected' : ''}`}
                 onClick={() => handleIntuitiveSelect(style)}
               >
                 {style.image && (
@@ -112,7 +108,7 @@ export default function StyleStep({ artData, selected, onSelect, onNext, onPrev 
                   <span className="style-tile-name">{style.name_zh}</span>
                   <span className="style-tile-desc">{style.desc}</span>
                 </div>
-                {isSelected && <span className="style-tile-check">✓</span>}
+                {active && <span className="style-tile-check">✓</span>}
               </button>
             )
           })}
@@ -163,16 +159,16 @@ export default function StyleStep({ artData, selected, onSelect, onNext, onPrev 
         </div>
       )}
 
-      {/* Selected style display */}
-      {selected && (
+      {/* Selected styles display */}
+      {selected.length > 0 && (
         <div className="selected-style-bar">
-          已選風格：<strong>{selected.label_zh}</strong>
+          已選風格：{selected.map(s => <strong key={s.id} style={{ marginRight: '0.5rem' }}>{s.label_zh}</strong>)}
         </div>
       )}
 
       <div className="step-nav">
         <button className="btn-prev" onClick={onPrev}>← 上一步</button>
-        <button className="btn-next" onClick={onNext} disabled={!selected}>
+        <button className="btn-next" onClick={onNext} disabled={selected.length === 0}>
           下一步：選細節 →
         </button>
       </div>
