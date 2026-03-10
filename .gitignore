@@ -5,3 +5,20 @@ web/dist/
 .env
 *.pyc
 __pycache__/
+
+# 截圖與暫存檔
+*.png
+!web/public/**/*.png
+!web/src/**/*.png
+*.jpg
+!web/public/**/*.jpg
+*.json
+!web/public/art_data.json
+!web/src/**/*.json
+!package.json
+!web/package.json
+!web/package-lock.json
+!package-lock.json
+
+# Playwright logs
+.playwright-mcp/
