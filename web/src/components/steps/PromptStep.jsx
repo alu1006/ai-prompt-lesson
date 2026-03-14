@@ -118,12 +118,24 @@ export default function PromptStep({ selection, onPrev, onSave }) {
         <div className="prompt-block-text en">{en}</div>
       </div>
 
+      {/* Gemini CTA */}
+      <a
+        className="btn-gemini-cta"
+        href="https://gemini.google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span className="btn-gemini-icon">✦</span>
+        前往 Gemini 生成圖像
+        <span className="btn-gemini-sub">複製上方 Prompt 貼入即可</span>
+      </a>
+
       {/* Usage tips */}
       <div className="prompt-tips">
         <h4>怎麼使用這個 Prompt？</h4>
         <ol>
           <li>複製上方的中文提示詞 / English Prompt</li>
-          <li>前往 <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer"><strong>Gemini</strong></a></li>
+          <li>點擊上方按鈕前往 Gemini</li>
           <li>貼入文字框後按下生成，等待 10–30 秒</li>
           <li>可以調整描述、重新選擇細節，看看效果有什麼不同！</li>
         </ol>

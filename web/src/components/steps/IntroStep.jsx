@@ -1,6 +1,9 @@
 import { useState } from 'react'
+import { QRCodeSVG } from 'qrcode.react'
 
-const GUESS_IMAGES = [
+const LESSON_URL = 'https://ai-prompt-lesson.codinglu.tw/'
+
+const GUESS_IMAGES_A = [
   {
     id: 'portrait',
     src: '/intro/real-portrait-18c.jpg',
@@ -13,7 +16,7 @@ const GUESS_IMAGES = [
     src: '/intro/guess-ai-2.png',
     title: '巴黎街頭讀報老人',
     isAI: true,
-    reveal: 'AI 生成 — 來源：Gemini（Nano Banana 2）／Prompt：A candid shot of an old man reading a newspaper at a cozy street cafe in Paris, sunlight filtering through tree leaves, warm tones, Fujifilm XT4, nostalgic film grain, realistic street photography, unposed. 逼真的光影與構圖，讓許多人以為是真實街拍！',
+    reveal: 'AI 生成 — 來源：Gemini／Prompt：A candid shot of an old man reading a newspaper at a cozy street cafe in Paris, sunlight filtering through tree leaves, warm tones, Fujifilm XT4, nostalgic film grain, realistic street photography, unposed. 逼真的光影與構圖，讓許多人以為是真實街拍！',
   },
   {
     id: 'ai-portrait',
@@ -48,6 +51,58 @@ const GUESS_IMAGES = [
     originalLabel: '查看北齋原作',
   },
 ]
+
+const GUESS_IMAGES_B = [
+  {
+    id: 'telephone-booths',
+    src: '/intro/real-telephone-booths.jpg',
+    title: '電話亭',
+    isAI: false,
+    reveal: '真實畫作 — 理查德·埃斯特斯《電話亭》(Telephone Booths，1968)，超寫實主義 (Hyperrealism) 代表作。埃斯特斯將多張照片和記憶重新組合，創造出比真實更真實的光影世界，徹底模糊了繪畫與攝影的界限！',
+    original: 'https://www.museothyssen.org/en/collection/artists/estes-richard/telephone-booths',
+    originalLabel: '在提森博物館查看原作',
+  },
+  {
+    id: 'wanderer',
+    src: '/intro/real-wanderer.jpg',
+    title: '霧海上的流浪者',
+    isAI: false,
+    reveal: '真實畫作 — 卡斯帕·大衛·弗里德里希《霧海上的流浪者》(1818)，浪漫主義 (Romanticism) 的標誌性作品。它不追求細節的寫實，而是強調崇高 (Sublime) 的精神體驗——大自然的宏大與人類的渺小。',
+    original: 'https://en.wikipedia.org/wiki/Wanderer_above_the_Sea_of_Fog',
+    originalLabel: '查看維基百科介紹',
+  },
+  {
+    id: 'help-squirrel',
+    src: '/intro/real-help-squirrel.jpg',
+    title: 'Help!!!',
+    isAI: false,
+    reveal: '真實照片 — Tibor Kercz 攝影，Comedy Wildlife Photography Awards 2017 得獎作品。攝影師在對的時間按下快門，捕捉到這個千載難逢的爆笑瞬間！',
+  },
+  {
+    id: 'ai-rainy-day',
+    src: '/intro/ai-rainy-day.jpg',
+    title: '雨後林間',
+    isAI: true,
+    reveal: 'AI 生成 — 來源：Gemini。刻意加入細微的膠片噪點 (Film Grain) 和淺景深 (Shallow Depth of Field)，近處落葉與人影呈現自然的模糊質感，光線也是擴散的柔和日光，讓整體氛圍避免了 AI 常見的過度清晰感。',
+  },
+  {
+    id: 'ai-dali',
+    src: '/intro/ai-dali.jpg',
+    title: '熔化的時代',
+    isAI: true,
+    reveal: 'AI 生成，超現實主義仿作 — 來源：Gemini，靈感來自薩爾瓦多·達利。保留了熔化的時鐘與夢幻景觀，但融入現代科技的荒謬：熔化的伺服器架、佈滿螞蟻的智慧型手機，以及顯示著熔化社群媒體圖標的螢幕。',
+  },
+  {
+    id: 'monkey-escape',
+    src: '/intro/real-monkey-escape.jpg',
+    title: 'Monkey Escape',
+    isAI: false,
+    reveal: '真實照片 — Katy Laveck-Foster 攝影，Comedy Wildlife Photography Awards 得獎作品。這隻猴子的逃跑表情和姿態，正是真實自然觀察才能捕捉到的珍貴瞬間！',
+  },
+]
+
+// 每次重新整理隨機顯示 A 或 B 組
+const GUESS_IMAGES = Math.random() < 0.5 ? GUESS_IMAGES_A : GUESS_IMAGES_B
 
 export default function IntroStep({ onNext }) {
   const [slide, setSlide] = useState(0)
@@ -98,6 +153,13 @@ export default function IntroStep({ onNext }) {
             </div>
             <div className="intro-note">
               <strong>常見工具：</strong> DALL-E 3（OpenAI）、Midjourney、Stable Diffusion、Adobe Firefly
+            </div>
+            <div className="intro-qr-block">
+              <QRCodeSVG value={LESSON_URL} size={128} />
+              <div className="intro-qr-info">
+                <p className="intro-qr-label">掃描 QR Code 開啟本課程</p>
+                <a href={LESSON_URL} target="_blank" rel="noopener noreferrer" className="intro-qr-url">{LESSON_URL}</a>
+              </div>
             </div>
           </div>
         )}
