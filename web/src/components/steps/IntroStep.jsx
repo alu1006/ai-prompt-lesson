@@ -6,48 +6,48 @@ const LESSON_URL = 'https://ai-prompt-lesson.codinglu.tw/'
 const GUESS_IMAGES_A = [
   {
     id: 'portrait',
-    src: '/intro/real-portrait-18c.jpg',
+    src: '/intro/real-portrait-18c.webp',
     title: '18 世紀貴族肖像',
     isAI: false,
     reveal: '真實畫作 — Gainsborough《藍衣男孩》(The Blue Boy，1770)，現藏美國加州 Huntington 美術館。18 世紀英國油畫的精緻質感，常讓人以為是 AI！',
   },
   {
     id: 'ai-city',
-    src: '/intro/guess-ai-2.png',
+    src: '/intro/guess-ai-2.webp',
     title: '巴黎街頭讀報老人',
     isAI: true,
     reveal: 'AI 生成 — 來源：Gemini／Prompt：A candid shot of an old man reading a newspaper at a cozy street cafe in Paris, sunlight filtering through tree leaves, warm tones, Fujifilm XT4, nostalgic film grain, realistic street photography, unposed. 逼真的光影與構圖，讓許多人以為是真實街拍！',
   },
   {
     id: 'ai-portrait',
-    src: '/intro/guess-ai-3.png',
+    src: '/intro/guess-ai-3.webp',
     title: '都市街頭女子',
     isAI: true,
     reveal: 'AI 生成 — 來源：lummi.ai／Prompt：Stylish woman in oversized gray coat and sunglasses in urban setting, exuding confidence and modern fashion sense. 照片級真實感是 AI 圖像的典型特徵。',
   },
   {
     id: 'pearl',
-    src: '/intro/real-girl-pearl-earring.jpg',
+    src: '/intro/real-girl-pearl-earring.webp',
     title: '戴珍珠耳環的少女',
     isAI: false,
     reveal: '真實畫作 — 維梅爾（Vermeer）1665 年油畫，現藏荷蘭海牙莫瑞泰斯皇家美術館。360 年前的人類傑作！',
   },
   {
     id: 'starry-night',
-    src: '/intro/guess-real-1.png',
+    src: '/intro/guess-real-1.webp',
     title: '星夜',
     isAI: true,
     reveal: 'AI 生成，靈感來自梵谷風格 — 原作是梵谷 1889 年油畫，現藏紐約現代藝術博物館（MoMA）。旋渦狀筆觸讓許多人以為是 AI！',
-    original: '/intro/original-starry-night.jpg',
+    original: '/intro/original-starry-night.webp',
     originalLabel: '查看梵谷原作',
   },
   {
     id: 'great-wave',
-    src: '/intro/guess-real-2.png',
+    src: '/intro/guess-real-2.webp',
     title: '巨浪',
     isAI: true,
     reveal: 'AI 生成，靈感來自北齋風格 — 原作是葛飾北齋《神奈川沖浪裏》1831 年木刻版畫。極具設計感的構圖讓人誤以為是現代 AI！',
-    original: '/intro/original-great-wave.jpg',
+    original: '/intro/original-great-wave.webp',
     originalLabel: '查看北齋原作',
   },
 ]
@@ -55,7 +55,7 @@ const GUESS_IMAGES_A = [
 const GUESS_IMAGES_B = [
   {
     id: 'telephone-booths',
-    src: '/intro/real-telephone-booths.jpg',
+    src: '/intro/real-telephone-booths.webp',
     title: '電話亭',
     isAI: false,
     reveal: '真實畫作 — 理查德·埃斯特斯《電話亭》(Telephone Booths，1968)，超寫實主義 (Hyperrealism) 代表作。埃斯特斯將多張照片和記憶重新組合，創造出比真實更真實的光影世界，徹底模糊了繪畫與攝影的界限！',
@@ -64,7 +64,7 @@ const GUESS_IMAGES_B = [
   },
   {
     id: 'wanderer',
-    src: '/intro/real-wanderer.jpg',
+    src: '/intro/real-wanderer.webp',
     title: '霧海上的流浪者',
     isAI: false,
     reveal: '真實畫作 — 卡斯帕·大衛·弗里德里希《霧海上的流浪者》(1818)，浪漫主義 (Romanticism) 的標誌性作品。它不追求細節的寫實，而是強調崇高 (Sublime) 的精神體驗——大自然的宏大與人類的渺小。',
@@ -73,28 +73,28 @@ const GUESS_IMAGES_B = [
   },
   {
     id: 'help-squirrel',
-    src: '/intro/real-help-squirrel.jpg',
+    src: '/intro/real-help-squirrel.webp',
     title: 'Help!!!',
     isAI: false,
     reveal: '真實照片 — Tibor Kercz 攝影，Comedy Wildlife Photography Awards 2017 得獎作品。攝影師在對的時間按下快門，捕捉到這個千載難逢的爆笑瞬間！',
   },
   {
     id: 'ai-rainy-day',
-    src: '/intro/ai-rainy-day.jpg',
+    src: '/intro/ai-rainy-day.webp',
     title: '雨後林間',
     isAI: true,
     reveal: 'AI 生成 — 來源：Gemini。刻意加入細微的膠片噪點 (Film Grain) 和淺景深 (Shallow Depth of Field)，近處落葉與人影呈現自然的模糊質感，光線也是擴散的柔和日光，讓整體氛圍避免了 AI 常見的過度清晰感。',
   },
   {
     id: 'ai-dali',
-    src: '/intro/ai-dali.jpg',
+    src: '/intro/ai-dali.webp',
     title: '熔化的時代',
     isAI: true,
     reveal: 'AI 生成，超現實主義仿作 — 來源：Gemini，靈感來自薩爾瓦多·達利。保留了熔化的時鐘與夢幻景觀，但融入現代科技的荒謬：熔化的伺服器架、佈滿螞蟻的智慧型手機，以及顯示著熔化社群媒體圖標的螢幕。',
   },
   {
     id: 'monkey-escape',
-    src: '/intro/real-monkey-escape.jpg',
+    src: '/intro/real-monkey-escape.webp',
     title: 'Monkey Escape',
     isAI: false,
     reveal: '真實照片 — Katy Laveck-Foster 攝影，Comedy Wildlife Photography Awards 得獎作品。這隻猴子的逃跑表情和姿態，正是真實自然觀察才能捕捉到的珍貴瞬間！',
@@ -219,9 +219,9 @@ export default function IntroStep({ onNext }) {
             <p className="intro-subtitle">越具體的描述，越精準的圖像</p>
             <div className="prompt-compare-visual">
               {[
-                { level: '模糊', text: '"一隻貓"', img: '/intro/prompt-weak.png', note: '結果隨機，什麼都有可能' },
-                { level: '加入風格與場景', text: '"一隻黑貓，坐在窗邊，水彩風格"', img: '/intro/prompt-medium.png', note: '顏色、姿勢、風格有了方向' },
-                { level: '完整描述', text: '"一隻黑貓，窗邊，月光逆光，神秘氛圍，水彩，冷色調，夜晚"', img: '/intro/prompt-strong.png', note: '每個視覺細節都被精準控制' },
+                { level: '模糊', text: '"一隻貓"', img: '/intro/prompt-weak.webp', note: '結果隨機，什麼都有可能' },
+                { level: '加入風格與場景', text: '"一隻黑貓，坐在窗邊，水彩風格"', img: '/intro/prompt-medium.webp', note: '顏色、姿勢、風格有了方向' },
+                { level: '完整描述', text: '"一隻黑貓，窗邊，月光逆光，神秘氛圍，水彩，冷色調，夜晚"', img: '/intro/prompt-strong.webp', note: '每個視覺細節都被精準控制' },
               ].map((item, i) => (
                 <div key={i} className="prompt-visual-item">
                   <div className="prompt-visual-meta">
