@@ -1,0 +1,18 @@
+{
+  "name": "gen-ai-animation",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.tsx",
+    "render": "remotion render src/index.tsx WhatIsGenAI ../web/public/intro/what-is-gen-ai.mp4 --crf=23"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.547",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.547"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.2",
+    "typescript": "^7.0.2"
+  }
+}

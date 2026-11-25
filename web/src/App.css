@@ -208,6 +208,15 @@ body {
 }
 .intro-subtitle { color: #888; font-size: 0.9rem; }
 
+.intro-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 1px solid #e5e1d8;
+  border-radius: 12px;
+  background: #f8f7f4;
+}
+
 /* Cards row (slide 1) */
 .intro-cards-row {
   display: flex;
