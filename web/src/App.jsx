@@ -8,14 +8,15 @@ import ProductStep from './components/steps/ProductStep.jsx'
 import PromptStep from './components/steps/PromptStep.jsx'
 import { DEFAULT_PALETTE } from './utils/palette.js'
 import { EMPTY_DETAILS } from './data/detailOptions.js'
+import AtelierHero from './components/AtelierHero.jsx'
 
 const STEPS = [
-  { id: 'intro',   label: '關於 AI' },
-  { id: 'subject', label: '主體' },
-  { id: 'style',   label: '風格' },
-  { id: 'details', label: '細節' },
-  { id: 'product', label: '產品' },
-  { id: 'prompt',  label: 'Prompt' },
+  { id: 'intro',   label: '關於 AI', en: 'ABOUT AI' },
+  { id: 'subject', label: '主體', en: 'SUBJECT' },
+  { id: 'style',   label: '風格', en: 'STYLE' },
+  { id: 'details', label: '細節', en: 'DETAILS' },
+  { id: 'product', label: '產品', en: 'OBJECTS' },
+  { id: 'prompt',  label: 'Prompt', en: 'YOUR PROMPT' },
 ]
 
 
@@ -35,6 +36,8 @@ export default function App() {
   const [savedPrompts, setSavedPrompts] = useState(() => {
     try { return JSON.parse(localStorage.getItem('savedPrompts') || '[]') } catch { return [] }
   })
+
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [step])
 
   const savePrompt = (entry) => {
     const updated = [entry, ...savedPrompts]
@@ -64,7 +67,8 @@ export default function App() {
   const selection = { subject, styles, ...details, product, palette }
 
   return (
-    <div className="wizard-app">
+    <div className={`wizard-app atelier-site${step === 0 ? ' atelier-home' : ''}`}>
+      <a className="skip-to-content" href="#lesson-content">跳至教材內容</a>
       {showSaved && (
         <SavedPromptsPage
           userPrompts={savedPrompts}
@@ -74,20 +78,15 @@ export default function App() {
       )}
 
       {/* ── Header ── */}
-      <header className="wizard-header">
-        <div className="wizard-header-row">
-          <div>
-            <h1>藝術風格生成器</h1>
-            <p>學習如何用 Prompt 引導 AI 創作圖像</p>
-          </div>
-          <button className="btn-saved-open" onClick={() => setShowSaved(true)}>
-            收藏 {savedPrompts.length > 0 && <span className="saved-count">{savedPrompts.length}</span>}
-          </button>
-        </div>
-      </header>
+      <header className="atelier-masthead">
+        <h1 className="sr-only">藝術風格生成器</h1>
+        <button type="button" className="atelier-brand" aria-label="藝術風格生成器首頁" onClick={() => goTo(0)}>
+          <svg viewBox="0 0 46 32" fill="none" aria-hidden="true"><path d="M3 25L17 7L24 16L30 9L43 25H3Z M9 25L19 13L26 22L32 15L39 25 M1 28H45" stroke="currentColor" strokeWidth=".8" /></svg>
+          <span><strong>藝術風格生成器</strong><span lang="en">PROMPT ATELIER</span></span>
+        </button>
 
       {/* ── Step indicator ── */}
-      <nav className="wizard-nav">
+      <nav className="wizard-nav" aria-label="教材步驟">
         {STEPS.map((s, i) => (
           <button
             key={s.id}
@@ -98,6 +97,7 @@ export default function App() {
           >
             <span className="wsb-num">{i < step ? '✓' : i + 1}</span>
             <span className="wsb-label">{s.label}</span>
+            <span className="wsb-en" lang="en">{s.en}</span>
           </button>
         ))}
         <div
@@ -105,9 +105,18 @@ export default function App() {
           style={{ width: `${(step / (STEPS.length - 1)) * 100}%` }}
         />
       </nav>
+        <button className="btn-saved-open" onClick={() => setShowSaved(true)} aria-label={`開啟收藏，${savedPrompts.length} 個已存提示詞`}>
+          <svg viewBox="0 0 20 24" width="14" height="18" fill="none" aria-hidden="true"><path d="M4 3H16V21L10 16L4 21V3Z" stroke="currentColor" strokeWidth="1" /></svg>
+          <span>收藏</span>{savedPrompts.length > 0 && <span className="saved-count">{savedPrompts.length}</span>}
+        </button>
+      </header>
+
+      {step === 0 && <AtelierHero onBegin={() => goTo(1)} />}
 
       {/* ── Step content ── */}
-      <main className="wizard-main">
+      <main className="wizard-main" id="lesson-content" tabIndex="-1">
+        <div className="chapter-caption"><span lang="en">{STEPS[step].en}</span><span>{String(step + 1).padStart(2, '0')} — 06</span></div>
+        <div className="chapter-rail" aria-hidden="true">{STEPS[step].label}<span>EXPLORING VISUAL LANGUAGE</span></div>
         {step === 0 && <IntroStep onNext={next} />}
         {step === 1 && (
           <SubjectStep
@@ -152,6 +161,11 @@ export default function App() {
           />
         )}
       </main>
+      <footer className="atelier-footer">
+        <div className="footer-signature"><span>藝術風格生成器</span><small lang="en">A STUDY IN WORDS & IMAGES.</small></div>
+        <nav aria-label="頁尾教材導覽">{STEPS.map((s, i) => <button type="button" key={s.id} onClick={() => goTo(i)} aria-current={i === step ? 'step' : undefined}>{s.label}</button>)}</nav>
+        <span className="footer-colophon">CODINGLU · CREATIVE LEARNING</span>
+      </footer>
     </div>
   )
 }

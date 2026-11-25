@@ -44,6 +44,8 @@ In production, also serves `web/dist/` as static files.
 ### Frontend (`web/`)
 React 18 + Vite SPA. Dev server at port 5173 proxies `/api` to port 3001.
 
+**Visual system:** `editorial.css` is imported after legacy `App.css`. It defines the active white/indigo editorial design (serif typography, vertical chapter rails, generous whitespace, squared image cards). New UI should use its `--blue`, `--ink`, `--muted`, `--line`, `--wash`, `--serif`, and `--sans` tokens. App contains the shared masthead/footer and six-step navigation. `AtelierHero.jsx` appears only on the introductory step; its original watercolor and actual generation prompt are in `web/public/editorial/`. Responsive layout changes at 1000px and 700px; mobile keeps all six step controls visible.
+
 **Wizard flow** — `App.jsx` orchestrates 6 steps in order:
 
 | Step | Component | Purpose |
