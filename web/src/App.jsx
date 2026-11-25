@@ -7,6 +7,7 @@ import DetailsStep from './components/steps/DetailsStep.jsx'
 import ProductStep from './components/steps/ProductStep.jsx'
 import PromptStep from './components/steps/PromptStep.jsx'
 import { DEFAULT_PALETTE } from './utils/palette.js'
+import { EMPTY_DETAILS } from './data/detailOptions.js'
 
 const STEPS = [
   { id: 'intro',   label: '關於 AI' },
@@ -17,7 +18,6 @@ const STEPS = [
   { id: 'prompt',  label: 'Prompt' },
 ]
 
-const EMPTY_DETAILS = { action: null, scene: null, angle: null, lighting: null, mood: null }
 
 export default function App() {
   const [step, setStep]       = useState(0)

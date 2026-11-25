@@ -76,6 +76,9 @@ painting: { id, name_zh, name_en, image_url? }
 **Key data files in `web/src/data/`:**
 - `intuitiveStyles.js` — intuitive style presets with English prompt keywords used directly in DALL-E prompts
 - `styleCatalog.js` — canonical 100-style catalog, category list, and `filterStyles` helper
+- `subjectLibrary.js` — 120 bilingual subject presets in 12 categories, cross-category search and exact preset English mapping; re-exported by `subjectPresets.js`. Custom subjects retain the entered text.
+- `detailOptions.js` — 12 detail categories, 12 bilingual options each; `level` separates six basic and six advanced categories. Existing `img` references remain optional; new options have teaching descriptions.
+- `utils/prompts.js` — shared `buildPrompts` and `selectionTags` iterate all detail categories so newly added selections appear in both languages and saved summaries.
 - `eraData.js` — maps Wikidata Q-IDs to historical era groupings
 - `customPanels.js` — two hardcoded panels (American animation, Japanese anime)
 - `subjectPresets.js`, `detailOptions.js` — preset options for subject/detail steps

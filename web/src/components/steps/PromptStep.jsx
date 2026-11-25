@@ -1,39 +1,5 @@
 import { useState } from 'react'
-import { palettePrompt } from '../../utils/palette.js'
-
-function buildPrompts(selection) {
-  const { subject, styles = [], action, scene, angle, lighting, mood, product } = selection
-  const palette = palettePrompt(selection.palette)
-
-  // ── 中文 prompt ──
-  const zhParts = []
-  if (subject) zhParts.push(subject)
-  if (action?.zh) zhParts.push(action.zh)
-  if (scene?.zh) zhParts.push(`在${scene.zh}`)
-  if (angle?.zh) zhParts.push(`${angle.zh}視角`)
-  if (styles.length > 0) zhParts.push(`以${styles.map(s => s.label_zh).join('、')}風格`)
-  if (lighting?.zh) zhParts.push(lighting.zh)
-  if (mood?.zh) zhParts.push(`${mood.zh}氛圍`)
-  if (product?.id && product.id !== 'none') zhParts.push(`去背、適合印製於${product.name_zh}`)
-  if (palette.zh) zhParts.push(palette.zh)
-
-  // ── English prompt ──
-  const enParts = []
-  if (subject) enParts.push(subject)
-  if (action?.en) enParts.push(action.en)
-  if (scene?.en) enParts.push(scene.en)
-  if (angle?.en) enParts.push(angle.en)
-  if (styles.length > 0) enParts.push(styles.map(s => s.label_en).join(', '))
-  if (lighting?.en) enParts.push(lighting.en)
-  if (mood?.en) enParts.push(mood.en)
-  if (product?.prompt_en) enParts.push(product.prompt_en)
-  if (palette.en) enParts.push(palette.en)
-
-  return {
-    zh: zhParts.join('，'),
-    en: enParts.join(', '),
-  }
-}
+import { buildPrompts, selectionTags } from '../../utils/prompts.js'
 
 function CopyButton({ text }) {
   const [copied, setCopied] = useState(false)
@@ -58,33 +24,16 @@ export default function PromptStep({ selection, onPrev, onSave }) {
     onSave({
       id: `user-${Date.now()}`,
       title: selection.subject || '我的 Prompt',
-      tags: [
-        selection.subject && { label: '主體', value: selection.subject },
-        ...(selection.styles?.length > 0 ? selection.styles.map(s => ({ label: '風格', value: s.label_zh })) : []),
-        selection.action && { label: '動作', value: selection.action.zh },
-        selection.scene && { label: '場景', value: selection.scene.zh },
-        selection.angle && { label: '鏡頭', value: selection.angle.zh },
-        selection.lighting && { label: '光影', value: selection.lighting.zh },
-        selection.mood && { label: '情緒', value: selection.mood.zh },
-        selection.product?.id && selection.product.id !== 'none' && { label: '產品', value: selection.product.name_zh },
-      ].filter(Boolean),
+      tags: selectionTags(selection),
       prompt_zh: zh,
       prompt_en: en,
       palette: selection.palette,
+      selection,
     })
     setSaved(true)
   }
 
-  const tags = [
-    selection.subject && { label: '主體', value: selection.subject },
-    ...(selection.styles?.length > 0 ? selection.styles.map(s => ({ label: '風格', value: s.label_zh })) : []),
-    selection.action && { label: '動作', value: selection.action.zh },
-    selection.scene && { label: '場景', value: selection.scene.zh },
-    selection.angle && { label: '鏡頭', value: selection.angle.zh },
-    selection.lighting && { label: '光影', value: selection.lighting.zh },
-    selection.mood && { label: '情緒', value: selection.mood.zh },
-    selection.product?.id && selection.product.id !== 'none' && { label: '產品', value: selection.product.name_zh },
-  ].filter(Boolean)
+  const tags = selectionTags(selection)
 
   return (
     <div className="wizard-step-page">
@@ -117,7 +66,7 @@ export default function PromptStep({ selection, onPrev, onSave }) {
       <div className="prompt-block">
         <div className="prompt-block-header">
           <span className="prompt-block-title">English Prompt</span>
-          <span className="prompt-block-hint">推薦用於 DALL-E、Midjourney 等工具</span>
+          <span className="prompt-block-hint">預設主體附英文；自訂描述保留原文</span>
           <CopyButton text={en} />
         </div>
         <div className="prompt-block-text en">{en}</div>
