@@ -188,7 +188,9 @@ const ALL_CATEGORIES = [
 ]
 export const DETAIL_CATEGORIES = ALL_CATEGORIES.map(category => ({ ...category,
   options: category.options.map((option, index) => ({ ...option,
-    img: option.img || `/detail-previews/v1/d-${category.key}-${String(index + 1).padStart(2, '0')}.${['composition','ratio'].includes(category.key) ? 'svg' : 'webp'}`,
+    img: option.img?.startsWith('/tag-previews/')
+      ? `/detail-previews/quirky-v1/q-${category.key}-${String(index + 1).padStart(2, '0')}.webp`
+      : option.img || `/detail-previews/v1/d-${category.key}-${String(index + 1).padStart(2, '0')}.${['composition','ratio'].includes(category.key) ? 'svg' : 'webp'}`,
   })),
 }))
 export const EMPTY_DETAILS = Object.fromEntries(DETAIL_CATEGORIES.map(c => [c.key, null]))

@@ -42,7 +42,7 @@ test('aspect-ratio diagrams preserve their stated frame dimensions', () => {
 
 test('new raster references have a generation record for each image', () => {
   const records = JSON.parse(readFileSync(new URL('../public/reference-generation.json',import.meta.url),'utf8'))
-  const generated = [...SUBJECT_PRESETS, ...DETAIL_CATEGORIES.flatMap(c=>c.options).filter(o=>o.img.startsWith('/detail-previews/') && o.img.endsWith('.webp'))]
+  const generated = [...SUBJECT_PRESETS, ...DETAIL_CATEGORIES.flatMap(c=>c.options).filter(o=>o.img.startsWith('/detail-previews/v1/') && o.img.endsWith('.webp'))]
   assert.equal(generated.length, 204)
   assert.equal(Object.keys(records).length, 204)
   assert.equal(new Set(Object.values(records).map(r=>r.original)).size, 204)
@@ -50,5 +50,18 @@ test('new raster references have a generation record for each image', () => {
     const record = Object.values(records).find(r=>r.image===item.img)
     assert.ok(record?.prompt.includes(item.en), item.zh)
     assert.equal(record.generator, 'built-in image_gen')
+  }
+})
+
+test('the 36 legacy detail illustrations are replaced by quirky cat references', () => {
+  const options = DETAIL_CATEGORIES.flatMap(c=>c.options)
+  assert.equal(options.filter(o=>o.img.startsWith('/tag-previews/')).length,0)
+  const quirky = options.filter(o=>o.img.startsWith('/detail-previews/quirky-v1/'))
+  assert.equal(quirky.length,36)
+  const records = JSON.parse(readFileSync(new URL('../public/quirky-generation.json',import.meta.url),'utf8'))
+  for (const option of quirky) {
+    const record = Object.values(records).find(r=>r.image===option.img)
+    assert.ok(record?.prompt.includes(option.en),option.zh)
+    assert.ok(existsSync(fileURLToPath(new URL(`../public${option.img}`,import.meta.url))),option.zh)
   }
 })

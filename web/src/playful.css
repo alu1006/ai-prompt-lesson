@@ -1,0 +1,171 @@
+/* The active playful skin. Editorial layout remains as a structural baseline. */
+:root { --ink: #25282c; --blue: #25282c; --blue-soft: #e4f4bd; --muted: #555b61; --line: #25282c; --paper: #fffdf5; --wash: #f1f3e7; --serif: 'Trebuchet MS', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; --sans: 'Trebuchet MS', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; --lime: #d6ef74; --pink: #ff91b0; --orange: #ff9a45; }
+body { background: var(--paper); }
+.atelier-masthead { background: var(--paper); border-bottom: 2px solid var(--ink); min-height: 96px; padding: 17px 4vw; grid-template-columns: 255px minmax(0,1fr) 100px; }
+.atelier-brand { gap: 11px; }
+.atelier-brand > svg { width: 43px; height: 42px; transform: rotate(-6deg); }
+.atelier-brand strong { font-size: 17px; font-weight: 900; letter-spacing: -.02em; }
+.atelier-brand span[lang=en] { font-size: 8px; color: var(--ink); font-weight: 700; letter-spacing: .11em; }
+.atelier-site .wizard-nav { gap: 1.4vw; }
+.atelier-site .wizard-step-btn { font-weight: 800; border-radius: 8px; padding: 10px 7px; gap: 4px; color: var(--ink); }
+.atelier-site .wsb-en { font-size: 8px; font-weight: 700; letter-spacing: .03em; }
+.atelier-site .wsb-label { font-size: 12px; font-weight: 800; letter-spacing: 0; }
+.atelier-site .wizard-step-btn.active { background: var(--lime); transform: rotate(-3deg); box-shadow: 2px 2px 0 var(--ink); outline: 1.5px solid var(--ink); }
+.atelier-site .wizard-step-btn.active::after { display: none; }
+.atelier-site .btn-saved-open { background: white; border: 1.5px solid var(--ink); border-radius: 9px; padding: 10px 13px; font-weight: 700; letter-spacing: 0; }
+.atelier-site .saved-count { background: var(--pink); color: var(--ink); border-radius: 50%; }
+.quirky-hero { width: min(1200px, calc(100% - 80px)); margin: 58px auto 15px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 45px; position: relative; padding: 18px 0 60px; }
+.quirky-kicker { display: inline-block; background: var(--lime); padding: 9px 12px; border: 1.5px solid var(--ink); border-radius: 5px; transform: rotate(-2deg); font-size: 10px; font-weight: 800; letter-spacing: .07em; }
+.quirky-hero h2 { font-size: clamp(34px,4.6vw,62px); line-height: 1.4; margin: 26px 0 18px; letter-spacing: -.04em; font-weight: 900; }
+.quirky-hero h2 em { font-style: normal; background: linear-gradient(transparent 57%,var(--pink) 57% 91%,transparent 91%); }
+.quirky-hero-copy > p { font-size: 14px; line-height: 1.95; color: var(--muted); }
+.quirky-hero-copy .quirky-hero-lead { font-weight: 800; font-size: 19px; color: var(--ink); margin-bottom: 8px; }
+.quirky-start { display: inline-flex; align-items: center; gap: 28px; margin-top: 27px; background: var(--ink); color: white; padding: 17px 23px; border-radius: 9px; border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--orange); font: inherit; font-size: 15px; font-weight: 800; cursor: pointer; transition: transform .15s, box-shadow .15s; }
+.quirky-start:hover { transform: translate(2px,2px); box-shadow: 3px 3px 0 var(--orange); }
+.quirky-start span { font-size: 24px; }
+.quirky-stats { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 30px; font-size: 11px; color: #565d61; }
+.quirky-stats b { font-size: 20px; color: var(--ink); }
+.quirky-hero-art { margin: 0; position: relative; transform: rotate(2deg); background: #fff9e9; border: 2px solid var(--ink); border-radius: 42% 42% 13px 13px; padding: 30px 8px 12px; box-shadow: 8px 8px 0 var(--lime); }
+.quirky-hero-art img { width: 100%; height: auto; aspect-ratio: 3/2; object-fit: contain; display: block; border-radius: 40% 40% 0 0; }
+.quirky-hero-art figcaption { text-align: center; font-size: 9px; color: #575b60; margin: 14px 0 0; }
+.hero-sticker { position: absolute; z-index: 1; font-weight: 900; border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); }
+.sticker-lime { background: var(--lime); left: -24px; top: -15px; padding: 17px; font-size: 16px; line-height: 1.5; border-radius: 50%; transform: rotate(-13deg); }
+.sticker-pink { background: var(--pink); right: -15px; bottom: 22px; padding: 10px 12px; border-radius: 5px; font-size: 10px; transform: rotate(-7deg); }
+.quirky-explore { grid-column: 1/-1; display: inline-flex; align-items: center; justify-self: start; gap: 22px; margin-top: 7px; color: var(--ink); text-decoration: none; font-size: 11px; font-weight: 800; border-bottom: 2px dashed var(--ink); padding-bottom: 9px; }
+.atelier-site .wizard-main, .atelier-home .wizard-main { width: min(1120px,calc(100% - 80px)); max-width: 1120px; margin: 32px auto 80px; padding: 12px 0 0; }
+.chapter-rail { display: none; }
+.chapter-caption { font-size: 11px; font-weight: 900; letter-spacing: .05em; border-bottom: 2px solid var(--ink); padding-bottom: 14px; margin-bottom: 30px; }
+.chapter-caption > span:first-child { background: var(--pink); padding: 7px 10px; border: 1.5px solid var(--ink); border-radius: 5px; transform: rotate(-2deg); }
+.atelier-site .step-heading h2, .atelier-site .intro-title { font-weight: 900; font-size: clamp(27px,3vw,39px); letter-spacing: -.04em; }
+.atelier-site .step-heading p, .atelier-site .intro-subtitle { font-size: 14px; color: #555b61; line-height: 1.8; letter-spacing: 0; }
+.atelier-site .intro-tabs, .atelier-site .style-tabs { border-bottom: 0; gap: 9px; }
+.atelier-site .intro-tab, .atelier-site .style-tab { border: 1.5px solid var(--ink); border-radius: 8px; background: white; color: var(--ink); font-size: 13px; font-weight: 700; padding: 12px 15px; }
+.atelier-site .intro-tab.active, .atelier-site .style-tab.active { border: 1.5px solid var(--ink); background: var(--lime); color: var(--ink); box-shadow: 3px 3px 0 var(--ink); }
+.atelier-site .intro-tab-num, .atelier-site .intro-tab.active .intro-tab-num { background: var(--ink); color: white; border-radius: 50%; font-weight: 800; }
+.atelier-site .btn-next, .atelier-site .btn-prev { border: 2px solid var(--ink); border-radius: 8px; font-size: 13px; font-weight: 800; letter-spacing: 0; }
+.atelier-site .btn-next { background: var(--lime); color: var(--ink); box-shadow: 3px 3px 0 var(--ink); }
+.atelier-site .btn-next:hover:not(:disabled) { background: #c7e762; color: var(--ink); }
+.atelier-site .btn-prev { background: white; color: var(--ink); }
+.atelier-site .intro-video { border: 2px solid var(--ink); border-radius: 12px; }
+.atelier-site .intro-card { border: 1.5px solid var(--ink); border-radius: 10px; background: white; padding: 22px; }
+.atelier-site .intro-card:nth-of-type(1) { background: #edf4d7; }
+.atelier-site .intro-card:nth-of-type(3) { background: #ffe6ee; }
+.atelier-site .intro-card-icon { filter: none; opacity: 1; font-size: 30px; margin-bottom: 15px; }
+.atelier-site .intro-card h3 { font-size: 19px; font-weight: 900; letter-spacing: -.02em; }
+.atelier-site .intro-card p { font-size: 13px; color: #4e565d; line-height: 1.8; }
+.atelier-site .intro-arrow { color: var(--ink); font-weight: 900; }
+.atelier-site .intro-note, .atelier-site .intro-qr-block { background: #f1f3e7; border: 1.5px solid #d4d7c7; border-radius: 9px; color: #4d555b; font-size: 13px; }
+.atelier-site .guess-card { border: 2px solid var(--ink); border-radius: 12px; background: white; overflow: visible; }
+.atelier-site .guess-number { border-radius: 0 0 8px 0; background: var(--lime); color: var(--ink); border: 1.5px solid var(--ink); font-size: 17px; font-weight: 900; }
+.atelier-site .guess-title { font-size: 14px; font-weight: 800; }
+.atelier-site .btn-reveal { background: var(--pink); border: 1.5px solid var(--ink); border-radius: 6px; color: var(--ink); font-weight: 800; }
+.atelier-site .btn-hide, .atelier-site .btn-original { color: var(--ink); }
+.atelier-site .guess-explanation { color: #4e565d; font-size: 12px; }
+.quiz-set-controls { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding: 19px; background: #e8f0ff; border: 2px solid var(--ink); border-radius: 10px; }
+.quiz-set-status { display: flex; flex-direction: column; gap: 7px; }
+.quiz-set-status strong { font-size: 20px; font-weight: 900; }
+.quiz-set-status > span { font-size: 12px; color: #4c5662; }
+.quiz-set-buttons { display: flex; gap: 9px; flex-wrap: wrap; }
+.quiz-set-buttons button { font: inherit; font-size: 13px; font-weight: 800; padding: 12px 15px; border: 2px solid var(--ink); border-radius: 7px; color: var(--ink); background: white; cursor: pointer; }
+.quiz-set-buttons button:nth-child(2) { background: var(--lime); box-shadow: 2px 2px 0 var(--ink); }
+.quiz-set-buttons button:disabled { opacity: .38; cursor: not-allowed; box-shadow: none; }
+.atelier-site .subject-input { font-size: 20px; font-weight: 700; padding: 18px; border: 2px solid var(--ink); border-radius: 10px; }
+.atelier-site .subject-guide, .atelier-site .style-library-note, .atelier-site .detail-learning-note { background: #f1f3e7; border: 1.5px solid #d1d6bd; border-left: 5px solid var(--lime); border-radius: 9px; font-size: 13px; color: #50575c; }
+.atelier-site .subject-guide strong, .atelier-site .detail-learning-note strong { font-weight: 900; }
+.atelier-site .style-library-note h3, .atelier-site .detail-library-heading h3, .atelier-site .palette-heading h3 { font-size: 26px; font-weight: 900; letter-spacing: -.03em; }
+.atelier-site .style-library-kicker { display: inline-block; font-size: 10px; font-weight: 900; letter-spacing: .08em; color: #3f4c34; }
+.atelier-site .style-library-note p, .atelier-site .detail-library-heading p { font-size: 13px; color: #555b61; line-height: 1.9; }
+.atelier-site .library-search-label, .atelier-site .style-search, .atelier-site .style-category-select { font-size: 12px; font-weight: 700; color: #454d53; }
+.atelier-site .library-search-label input, .atelier-site .style-search input, .atelier-site .style-category-select select { border: 1.5px solid var(--ink); border-radius: 8px; min-height: 48px; background: white; }
+.atelier-site .preset-cat-btn, .atelier-site .detail-level-tabs button { background: white; border: 1.5px solid #cbd0c4; border-radius: 7px; font-size: 12px; font-weight: 700; color: #4d565c; padding: 11px 13px; }
+.atelier-site .preset-cat-btn.active, .atelier-site .detail-level-tabs button[aria-pressed=true] { background: var(--lime); border: 1.5px solid var(--ink); box-shadow: 2px 2px 0 var(--ink); color: var(--ink); }
+.atelier-site .library-result-line, .atelier-site .style-library-status { color: #56605f; font-size: 11px; font-weight: 700; }
+.atelier-site .subject-library-grid, .atelier-site .style-library .style-grid, .atelier-site .detail-reference-grid { gap: 22px; }
+.atelier-site .subject-reference, .atelier-site .style-tile, .atelier-site .detail-reference { border: 1.5px solid var(--ink); border-radius: 11px; background: white; overflow: hidden; transition: transform .15s, box-shadow .15s; }
+.atelier-site .subject-reference:hover, .atelier-site .style-tile:hover, .atelier-site .detail-reference:hover { transform: translateY(-3px) rotate(-.5deg); box-shadow: 4px 4px 0 var(--lime); }
+.atelier-site .subject-reference:hover img, .atelier-site .style-tile:hover img, .atelier-site .detail-reference:hover img { filter: none; opacity: 1; }
+.atelier-site .subject-reference.active, .atelier-site .style-tile.selected, .atelier-site .detail-reference.selected { border: 2px solid var(--ink); outline: 0; background: #f2f8df; box-shadow: 4px 4px 0 var(--pink); }
+.atelier-site .subject-reference-copy, .atelier-site .style-library .style-tile-info, .atelier-site .detail-reference-copy { padding: 14px; }
+.atelier-site .subject-reference strong, .atelier-site .style-tile-name, .atelier-site .detail-reference-copy strong { font-size: 15px; font-weight: 900; letter-spacing: -.02em; }
+.atelier-site .subject-reference-category, .atelier-site .style-tile-category { color: #5e6b56; font-size: 10px; font-weight: 700; }
+.atelier-site .subject-reference span[lang=en], .atelier-site .style-tile-keyword, .atelier-site .detail-reference-copy small { font-size: 11px; color: #5b656d; }
+.atelier-site .style-library .style-tile-desc, .atelier-site .detail-reference-copy > span { color: #515b63; font-size: 12px; }
+.atelier-site .style-tile-check, .atelier-site .detail-reference-check { background: var(--lime); color: var(--ink); border: 1.5px solid var(--ink); border-radius: 50%; font-weight: 900; }
+.atelier-site .subject-preview, .atelier-site .selected-style-bar, .atelier-site .detail-selected-summary { background: #e9f4c9; border: 1.5px solid #a4b972; border-radius: 8px; color: var(--ink); font-size: 13px; }
+.atelier-site .selected-style-chip, .atelier-site .detail-selected-summary button { border: 1.5px solid #687a4f; border-radius: 6px; font-size: 12px; font-weight: 700; }
+.atelier-site .detail-reference-heading { border-bottom: 2px dashed #bac2ab; padding-bottom: 14px; }
+.atelier-site .detail-reference-heading h3 { font-size: 21px; font-weight: 900; letter-spacing: 0; }
+.atelier-site .detail-reference-heading h3 > span { filter: none; opacity: 1; font-size: 19px; }
+.atelier-site .detail-reference-heading > span, .atelier-site .library-footnote { color: #5c656d; font-size: 11px; }
+.atelier-site .palette-panel { background: white; border: 2px solid var(--ink); border-radius: 13px; box-shadow: 5px 5px 0 #e7eecb; }
+.atelier-site .palette-intro, .atelier-site .palette-teaching, .atelier-site .palette-actions, .atelier-site .palette-bw, .atelier-site .palette-heading > label { font-size: 12px; color: #545d64; }
+.atelier-site .palette-count button, .atelier-site .palette-rule select, .atelier-site .palette-actions button, .atelier-site .palette-hex { border: 1.5px solid #8e979a; border-radius: 6px; font-weight: 700; }
+.atelier-site .palette-count button[aria-pressed=true] { background: var(--pink); color: var(--ink); border-color: var(--ink); }
+.atelier-site .palette-color-well { border-radius: 7px; border: 1.5px solid #555; }
+.atelier-site .palette-preview { color: #5c656d; }
+.atelier-site .product-card { background: white; border: 1.5px solid var(--ink); border-radius: 10px; }
+.atelier-site .product-card.selected { background: #e9f4c9; box-shadow: 4px 4px 0 var(--ink); }
+.atelier-site .product-icon { filter: none; }
+.atelier-site .product-name { font-size: 15px; font-weight: 800; }
+.atelier-site .prompt-block { border: 2px solid var(--ink); border-radius: 10px; overflow: hidden; }
+.atelier-site .prompt-block-header { background: var(--lime); border-bottom: 1.5px solid var(--ink); }
+.atelier-site .prompt-block-title { font-weight: 900; }
+.atelier-site .prompt-block-hint { color: #444d37; }
+.atelier-site .prompt-block-text, .atelier-site .prompt-block-text.en { color: #38434d; font-size: 14px; }
+.atelier-site .btn-copy { border: 1.5px solid var(--ink); border-radius: 5px; font-weight: 800; }
+.atelier-site .prompt-tag { border-radius: 6px; background: #eaf0dc; }
+.atelier-site .btn-gemini-cta { background: var(--ink); color: white; border: 2px solid var(--ink); border-radius: 9px; font-weight: 800; box-shadow: 4px 4px 0 var(--pink); }
+.atelier-site .prompt-tips { border: 1.5px solid #d1d6bd; border-radius: 9px; background: #f1f3e7; color: #4f5a61; font-size: 13px; }
+.atelier-site .saved-panel { border: 2px solid var(--ink); border-radius: 14px; }
+.atelier-site .saved-header h2, .atelier-site .saved-item-title { font-weight: 900; }
+.atelier-site .saved-item { border: 1.5px solid #bbc3b5; border-radius: 8px; }
+.atelier-site .movement-card { border: 1.5px solid var(--ink); border-radius: 10px; }
+.atelier-site .movement-title h2, .atelier-site .era-name { font-weight: 800; }
+.atelier-footer { background: var(--lime); border-top: 2px solid var(--ink); padding: 30px 4vw; }
+.footer-signature { font-size: 15px; font-weight: 900; letter-spacing: 0; }
+.footer-signature small, .footer-colophon { color: #475137; font-size: 10px; letter-spacing: .02em; }
+.atelier-footer nav button { font-size: 12px; font-weight: 800; color: #36402d; }
+.atelier-footer nav button[aria-current=step] { border-bottom: 2px solid var(--ink); }
+@media (max-width: 1000px) {
+  .atelier-masthead { grid-template-columns: 205px minmax(0,1fr) 85px; padding: 16px 25px; gap: 9px; }
+  .atelier-brand strong { font-size: 14px; }
+  .atelier-site .wizard-nav { gap: 5px; }
+  .atelier-site .wsb-en { font-size: 7px; }
+  .atelier-site .wizard-step-btn { padding: 9px 4px; }
+  .quirky-hero { width: calc(100% - 64px); gap: 30px; }
+  .atelier-site .wizard-main { width: calc(100% - 64px); }
+}
+@media (max-width: 700px) {
+  .atelier-site .guess-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .atelier-masthead { grid-template-columns: 1fr auto; padding: 17px 20px; gap: 15px; }
+  .atelier-brand strong { font-size: 16px; }
+  .atelier-site .wizard-nav { border-top: 1px dashed #a9b19b; padding-top: 14px; gap: 5px; }
+  .atelier-site .wsb-en { display: none; }
+  .atelier-site .wsb-label { font-size: 12px; }
+  .atelier-site .wizard-step-btn { padding: 10px 7px; }
+  .quirky-hero { grid-template-columns: minmax(0,1fr); width: calc(100% - 44px); margin-top: 34px; padding-bottom: 22px; gap: 27px; }
+  .quirky-kicker { font-size: 9px; padding: 8px 10px; }
+  .quirky-hero h2 { font-size: 42px; line-height: 1.3; margin: 20px 0 18px; }
+  .quirky-hero-copy > p { font-size: 13px; }
+  .quirky-hero-copy .quirky-hero-lead { font-size: 17px; }
+  .quirky-start { font-size: 14px; padding: 14px 18px; }
+  .quirky-stats { gap: 14px; margin-top: 24px; font-size: 10px; }
+  .quirky-stats b { font-size: 17px; }
+  .quirky-hero-art { margin: 22px 8px 12px; }
+  .sticker-lime { left: -12px; padding: 12px; font-size: 13px; }
+  .sticker-pink { right: -10px; font-size: 9px; }
+  .quirky-explore { grid-column: auto; font-size: 11px; }
+  .atelier-site .wizard-main, .atelier-home .wizard-main { width: calc(100% - 40px); padding: 8px 0 0; margin: 30px auto 55px; }
+  .atelier-site .subject-library-grid, .atelier-site .style-library .style-grid, .atelier-site .detail-reference-grid { gap: 17px 13px; }
+  .atelier-site .subject-reference-copy, .atelier-site .style-library .style-tile-info, .atelier-site .detail-reference-copy { padding: 12px; }
+  .atelier-site .subject-reference strong, .atelier-site .style-tile-name, .atelier-site .detail-reference-copy strong { font-size: 14px; }
+  .atelier-site .subject-guide, .atelier-site .style-library-note, .atelier-site .detail-learning-note { font-size: 12px; }
+  .atelier-site .style-library-note h3, .atelier-site .detail-library-heading h3, .atelier-site .palette-heading h3 { font-size: 23px; }
+  .atelier-site .intro-tab { font-size: 11px; padding: 10px 8px; }
+  .atelier-site .intro-card { padding: 20px; }
+  .quiz-set-controls { padding: 15px; }
+  .quiz-set-buttons { width: 100%; }
+  .quiz-set-buttons button { font-size: 12px; padding: 11px; }
+  .atelier-site .btn-next, .atelier-site .btn-prev { padding: 12px 14px; }
+}
+@media (max-width: 480px) { .atelier-site .guess-grid { grid-template-columns: minmax(0,1fr); } }

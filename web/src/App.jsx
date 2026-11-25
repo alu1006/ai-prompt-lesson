@@ -81,8 +81,8 @@ export default function App() {
       <header className="atelier-masthead">
         <h1 className="sr-only">藝術風格生成器</h1>
         <button type="button" className="atelier-brand" aria-label="藝術風格生成器首頁" onClick={() => goTo(0)}>
-          <svg viewBox="0 0 46 32" fill="none" aria-hidden="true"><path d="M3 25L17 7L24 16L30 9L43 25H3Z M9 25L19 13L26 22L32 15L39 25 M1 28H45" stroke="currentColor" strokeWidth=".8" /></svg>
-          <span><strong>藝術風格生成器</strong><span lang="en">PROMPT ATELIER</span></span>
+          <svg viewBox="0 0 46 42" fill="none" aria-hidden="true"><path d="M6 16L5 3L17 10Q24 7 31 11L41 4L39 20Q44 39 23 39Q3 39 6 16Z" fill="#ff9a45" stroke="currentColor" strokeWidth="2"/><ellipse cx="17" cy="21" rx="7" ry="8" fill="white" stroke="currentColor" strokeWidth="1.5"/><ellipse cx="32" cy="21" rx="5" ry="6" fill="white" stroke="currentColor" strokeWidth="1.5"/><circle cx="18" cy="22" r="2" fill="currentColor"/><circle cx="31" cy="21" r="2" fill="currentColor"/><path d="M23 30L26 29L25 32" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
+          <span><strong>藝術風格生成器</strong><span lang="en">THE WEIRD IDEA LAB</span></span>
         </button>
 
       {/* ── Step indicator ── */}
@@ -162,7 +162,7 @@ export default function App() {
         )}
       </main>
       <footer className="atelier-footer">
-        <div className="footer-signature"><span>藝術風格生成器</span><small lang="en">A STUDY IN WORDS & IMAGES.</small></div>
+        <div className="footer-signature"><span>藝術風格生成器</span><small>正經學提示詞，不正經玩想像。</small></div>
         <nav aria-label="頁尾教材導覽">{STEPS.map((s, i) => <button type="button" key={s.id} onClick={() => goTo(i)} aria-current={i === step ? 'step' : undefined}>{s.label}</button>)}</nav>
         <span className="footer-colophon">CODINGLU · CREATIVE LEARNING</span>
       </footer>

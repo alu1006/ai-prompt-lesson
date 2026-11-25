@@ -19,5 +19,6 @@ for (const item of index) {
 }
 fs.writeFileSync(path.join(output, 'index.json'), JSON.stringify(index, null, 2))
 fs.copyFileSync(path.join(publicRoot, 'reference-generation.json'), path.join(output, 'generation.json'))
-fs.writeFileSync(path.join(output, 'README.txt'), '主體與細節參考圖庫\n\n120 個主體與 144 個細節皆有對應圖片。index.json 提供分類、中英文名稱、說明與相對圖片路徑。generation.json 記錄新生成的 204 張圖片之實際提示詞與來源。另含 36 張教材原有細節圖、24 張精確 SVG 構圖／比例示意。\n\n生成圖片是教學參考，並非生物學、工藝製程或攝影技法的唯一標準。原始生成 PNG 保留於本機 .codex/generated_images；網頁採用壓縮 WebP。\n')
+fs.copyFileSync(path.join(publicRoot, 'quirky-generation.json'), path.join(output, 'quirky-generation.json'))
+fs.writeFileSync(path.join(output, 'README.txt'), '主體與細節參考圖庫\n\n120 個主體與 144 個細節皆有對應圖片。index.json 提供分類、中英文名稱、說明與相對圖片路徑。generation.json 記錄 204 張生成圖片之實際提示詞與來源。quirky-generation.json 記錄另行重生的 36 張搞怪橘貓細節圖與網站主視覺提示詞。另含 24 張精確 SVG 構圖／比例示意。\n\n生成圖片是教學參考，並非生物學、工藝製程或攝影技法的唯一標準。原始生成 PNG 保留於本機 .codex/generated_images；網頁採用壓縮 WebP。\n')
 console.log(`Exported ${index.length} subject/detail illustrations.`)
