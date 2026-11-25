@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import { INTUITIVE_STYLES } from '../../data/intuitiveStyles.js'
+import StyleGallery from '../StyleGallery.jsx'
 import { ERA_ORDER, MOVEMENT_ERA } from '../../data/eraData.js'
 import { AMERICAN_ANIMATION, JAPANESE_ANIME } from '../../data/customPanels.js'
 import MovementCard from '../MovementCard.jsx'
 
 export default function StyleStep({ artData, selected = [], onSelect, onNext, onPrev }) {
-  const isSelected = (id) => selected.some(s => s.id === id)
   const [tab, setTab] = useState('intuitive') // 'intuitive' | 'movement'
 
   // Group movements by era
@@ -53,7 +52,7 @@ export default function StyleStep({ artData, selected = [], onSelect, onNext, on
     <div className="wizard-step-page">
       <div className="step-heading">
         <h2>選擇風格</h2>
-        <p>選一種視覺風格，讓 AI 知道你想要的畫面感</p>
+        <p>從 100 種風格探索畫面語言，可選一種，也可以混合搭配</p>
       </div>
 
       {/* Tab selector */}
@@ -62,7 +61,7 @@ export default function StyleStep({ artData, selected = [], onSelect, onNext, on
           className={`style-tab${tab === 'intuitive' ? ' active' : ''}`}
           onClick={() => setTab('intuitive')}
         >
-          直覺風格
+          風格圖庫 · 100
         </button>
         <button
           className={`style-tab${tab === 'movement' ? ' active' : ''}`}
@@ -72,47 +71,8 @@ export default function StyleStep({ artData, selected = [], onSelect, onNext, on
         </button>
       </div>
 
-      {/* ── Intuitive styles ── */}
       {tab === 'intuitive' && (
-        <div className="style-grid">
-          {INTUITIVE_STYLES.map(style => {
-            const active = isSelected(style.id)
-            return (
-              <button
-                key={style.id}
-                className={`style-tile${active ? ' selected' : ''}`}
-                onClick={() => handleIntuitiveSelect(style)}
-              >
-                {style.image && (
-                  <img
-                    src={style.image}
-                    alt={style.name_zh}
-                    className="style-tile-img"
-                    onError={e => {
-                      e.target.style.display = 'none'
-                      e.target.nextSibling.style.display = 'flex'
-                    }}
-                  />
-                )}
-                <div
-                  className="style-tile-placeholder"
-                  style={{
-                    background: style.color + '22',
-                    borderColor: style.color + '55',
-                    display: style.image ? 'none' : 'flex',
-                  }}
-                >
-                  <span style={{ color: style.color, fontSize: '2rem' }}>✦</span>
-                </div>
-                <div className="style-tile-info">
-                  <span className="style-tile-name">{style.name_zh}</span>
-                  <span className="style-tile-desc">{style.desc}</span>
-                </div>
-                {active && <span className="style-tile-check">✓</span>}
-              </button>
-            )
-          })}
-        </div>
+        <StyleGallery selected={selected} onSelect={handleIntuitiveSelect} />
       )}
 
       {/* ── Art movements (original MovementCard UI) ── */}
@@ -162,7 +122,11 @@ export default function StyleStep({ artData, selected = [], onSelect, onNext, on
       {/* Selected styles display */}
       {selected.length > 0 && (
         <div className="selected-style-bar">
-          已選風格：{selected.map(s => <strong key={s.id} style={{ marginRight: '0.5rem' }}>{s.label_zh}</strong>)}
+          已選風格（{selected.length}）：{selected.map(s => (
+            <button key={s.id} type="button" className="selected-style-chip" onClick={() => onSelect(s)} aria-label={`移除${s.label_zh}`}>
+              {s.label_zh} <span aria-hidden="true">×</span>
+            </button>
+          ))}
         </div>
       )}
 

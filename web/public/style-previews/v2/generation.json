@@ -1,0 +1,602 @@
+{
+  "watercolor": {
+    "generator": "built-in image_gen",
+    "original": "exec-bf7164cd-1164-4c73-9e57-5c1b5a791362.png",
+    "prompt": "A single square educational art style example. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Keep the same subject and framing as a series of comparative style studies. Render the ENTIRE image decisively in this medium: transparent watercolor, flowing translucent washes, paper texture. Prioritize recognizability of this medium over realistic fur. Grayscale or blue-white palette is appropriate when the medium calls for it. This is one individual artwork, not a grid or comparison board. No words, labels, lettering, border, watermark, logos, existing franchise characters. High quality, clear texture and distinguishing marks of the medium.",
+    "image": "/style-previews/v2/watercolor.webp"
+  },
+  "oil": {
+    "generator": "built-in image_gen",
+    "original": "exec-7373674a-947d-4160-9765-3d415b66b24f.png",
+    "prompt": "A single square educational art style example. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Keep the same subject and framing as a series of comparative style studies. Render the ENTIRE image decisively in this medium: oil painting, thick impasto, palette knife ridges. Prioritize recognizability of this medium over realistic fur. Grayscale or blue-white palette is appropriate when the medium calls for it. This is one individual artwork, not a grid or comparison board. No words, labels, lettering, border, watermark, logos, existing franchise characters. High quality, clear texture and distinguishing marks of the medium.",
+    "image": "/style-previews/v2/oil.webp"
+  },
+  "gouache": {
+    "generator": "built-in image_gen",
+    "original": "exec-b4801af2-5e66-4433-a95a-ce9596112a4f.png",
+    "prompt": "A single square educational art style example. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Keep the same subject and framing as a series of comparative style studies. Render the ENTIRE image decisively in this medium: gouache, opaque matte pigment, velvety flat shapes. Prioritize recognizability of this medium over realistic fur. Grayscale or blue-white palette is appropriate when the medium calls for it. This is one individual artwork, not a grid or comparison board. No words, labels, lettering, border, watermark, logos, existing franchise characters. High quality, clear texture and distinguishing marks of the medium.",
+    "image": "/style-previews/v2/gouache.webp"
+  },
+  "acrylic": {
+    "generator": "built-in image_gen",
+    "original": "exec-31858ef6-c895-4f30-91ee-82a9239bbaf6.png",
+    "prompt": "A single square educational art style example. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Keep the same subject and framing as a series of comparative style studies. Render the ENTIRE image decisively in this medium: acrylic painting, saturated opaque layers, bold brushwork. Prioritize recognizability of this medium over realistic fur. Grayscale or blue-white palette is appropriate when the medium calls for it. This is one individual artwork, not a grid or comparison board. No words, labels, lettering, border, watermark, logos, existing franchise characters. High quality, clear texture and distinguishing marks of the medium.",
+    "image": "/style-previews/v2/acrylic.webp"
+  },
+  "inkwash": {
+    "generator": "built-in image_gen",
+    "original": "exec-25581cba-f79e-4426-b7ab-31332a054356.png",
+    "prompt": "A single square educational art style example. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Keep the same subject and framing as a series of comparative style studies. Render the ENTIRE image decisively in this medium: Chinese ink wash painting, black ink gradients, negative space. Prioritize recognizability of this medium over realistic fur. Grayscale or blue-white palette is appropriate when the medium calls for it. This is one individual artwork, not a grid or comparison board. No words, labels, lettering, border, watermark, logos, existing franchise characters. High quality, clear texture and distinguishing marks of the medium.",
+    "image": "/style-previews/v2/inkwash.webp"
+  },
+  "textured-brush": {
+    "generator": "built-in image_gen",
+    "original": "exec-799a9aa2-fb2a-4b40-a8c3-e1498cee8de9.png",
+    "prompt": "A single square educational art style example. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Keep the same subject and framing as a series of comparative style studies. Render the ENTIRE image decisively in this medium: dry brush painting, visible bristle marks and canvas weave. Prioritize recognizability of this medium over realistic fur. Grayscale or blue-white palette is appropriate when the medium calls for it. This is one individual artwork, not a grid or comparison board. No words, labels, lettering, border, watermark, logos, existing franchise characters. High quality, clear texture and distinguishing marks of the medium.",
+    "image": "/style-previews/v2/textured-brush.webp"
+  },
+  "fresco": {
+    "generator": "built-in image_gen",
+    "original": "exec-532d36cf-c740-4f55-af74-9f33402f0db1.png",
+    "prompt": "A single square educational art style example. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Keep the same subject and framing as a series of comparative style studies. Render the ENTIRE image decisively in this medium: fresco on lime plaster, earth pigments, weathered surface. Prioritize recognizability of this medium over realistic fur. Grayscale or blue-white palette is appropriate when the medium calls for it. This is one individual artwork, not a grid or comparison board. No words, labels, lettering, border, watermark, logos, existing franchise characters. High quality, clear texture and distinguishing marks of the medium.",
+    "image": "/style-previews/v2/fresco.webp"
+  },
+  "egg-tempera": {
+    "generator": "built-in image_gen",
+    "original": "exec-847ce407-573e-4695-a062-b5ceeec3e965.png",
+    "prompt": "A single square educational art style example. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Keep the same subject and framing as a series of comparative style studies. Render the ENTIRE image decisively in this medium: egg tempera on panel, fine crosshatched brushstrokes, luminous matte layers. Prioritize recognizability of this medium over realistic fur. Grayscale or blue-white palette is appropriate when the medium calls for it. This is one individual artwork, not a grid or comparison board. No words, labels, lettering, border, watermark, logos, existing franchise characters. High quality, clear texture and distinguishing marks of the medium.",
+    "image": "/style-previews/v2/egg-tempera.webp"
+  },
+  "encaustic": {
+    "generator": "built-in image_gen",
+    "original": "exec-d3c9bb88-bea7-4a8d-b0eb-64e9ed6f5e76.png",
+    "prompt": "A single square educational art style example. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Keep the same subject and framing as a series of comparative style studies. Render the ENTIRE image decisively in this medium: encaustic wax painting, translucent beeswax layers, scraped wax texture. Prioritize recognizability of this medium over realistic fur. Grayscale or blue-white palette is appropriate when the medium calls for it. This is one individual artwork, not a grid or comparison board. No words, labels, lettering, border, watermark, logos, existing franchise characters. High quality, clear texture and distinguishing marks of the medium.",
+    "image": "/style-previews/v2/encaustic.webp"
+  },
+  "sumi-color": {
+    "generator": "built-in image_gen",
+    "original": "exec-01f33e98-d58a-44b9-9016-3f74b047b549.png",
+    "prompt": "A single square educational art style example. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Keep the same subject and framing as a series of comparative style studies. Render the ENTIRE image decisively in this medium: colored ink painting, black brush outlines, diffused colored washes. Prioritize recognizability of this medium over realistic fur. Grayscale or blue-white palette is appropriate when the medium calls for it. This is one individual artwork, not a grid or comparison board. No words, labels, lettering, border, watermark, logos, existing franchise characters. High quality, clear texture and distinguishing marks of the medium.",
+    "image": "/style-previews/v2/sumi-color.webp"
+  },
+  "sketch": {
+    "generator": "built-in image_gen",
+    "original": "exec-9d27212a-9cbe-40ea-bfe7-98bcef63139e.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: graphite pencil drawing, fine hatching, grayscale shading. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/sketch.webp"
+  },
+  "charcoal": {
+    "generator": "built-in image_gen",
+    "original": "exec-4b4bba49-e8d0-42b1-b68f-0f39d25d9c26.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: charcoal drawing, velvety blacks, smudged soft shading. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/charcoal.webp"
+  },
+  "line-drawing": {
+    "generator": "built-in image_gen",
+    "original": "exec-12de4230-0f00-41af-8c6f-c469df6a6dd1.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: minimalist contour drawing, sparse black outlines, no shading. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/line-drawing.webp"
+  },
+  "draft": {
+    "generator": "built-in image_gen",
+    "original": "exec-bd8f0cf5-d932-44d2-9df9-f60cfa6b2c90.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: construction sketch, visible circles and gesture guidelines, pencil. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/draft.webp"
+  },
+  "rough-lines": {
+    "generator": "built-in image_gen",
+    "original": "exec-64963712-ed90-47cb-b473-2f445538f1d0.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: raw scratchy ink sketch, energetic overlapping rough strokes. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/rough-lines.webp"
+  },
+  "hand-drawn": {
+    "generator": "built-in image_gen",
+    "original": "exec-aaccdf45-17b1-4d2d-af04-076ed189479f.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: hand-drawn colored pencil illustration, imperfect organic contours. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/hand-drawn.webp"
+  },
+  "ink-brush": {
+    "generator": "built-in image_gen",
+    "original": "exec-09a4165d-f4bf-4c80-a052-ac744b5aa238.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: calligraphic ink brush drawing, tapered strokes, dry brush gaps. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/ink-brush.webp"
+  },
+  "uneven-lines": {
+    "generator": "built-in image_gen",
+    "original": "exec-f0c58f22-c78b-4926-b39c-5a54231b0204.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: dip pen drawing, variable line weight, tapered expressive linework. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/uneven-lines.webp"
+  },
+  "stippling": {
+    "generator": "built-in image_gen",
+    "original": "exec-b81593d0-bed8-4a1c-b584-3e2562a50847.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: ink stippling, thousands of distinct dots, no continuous hatching. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/stippling.webp"
+  },
+  "scratchboard": {
+    "generator": "built-in image_gen",
+    "original": "exec-fa209034-38c5-4b42-943e-5e030f71e662.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: scratchboard, white carved fine lines on solid black ground. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/scratchboard.webp"
+  },
+  "flat-vector": {
+    "generator": "built-in image_gen",
+    "original": "exec-5a086606-854f-4db7-8385-445b8105f2c7.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: flat vector illustration, solid fills, crisp contours, no gradients. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/flat-vector.webp"
+  },
+  "doodle": {
+    "generator": "built-in image_gen",
+    "original": "exec-be67ce14-208e-4c1b-8537-4e93a0133c62.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: playful doodle, whimsical casual ink marks, notebook drawing. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/doodle.webp"
+  },
+  "naive-art": {
+    "generator": "built-in image_gen",
+    "original": "exec-0600f06d-616c-4015-a844-6bacdba18c17.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: naive folk art, simple proportions, cheerful flat colors. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/naive-art.webp"
+  },
+  "sticker-art": {
+    "generator": "built-in image_gen",
+    "original": "exec-036e6dea-6394-43cd-b660-5d6c8b61169c.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: die-cut sticker, thick white outer border, bold outline. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/sticker-art.webp"
+  },
+  "quirky-cute": {
+    "generator": "built-in image_gen",
+    "original": "exec-88e5bf52-9838-45c5-b461-b750e5b8cf3b.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: quirky cute character, unusual proportions, playful asymmetry. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/quirky-cute.webp"
+  },
+  "geometric": {
+    "generator": "built-in image_gen",
+    "original": "exec-5e3b8b49-b3cb-4338-ad3a-b9a782cbe82a.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: geometric illustration, circles triangles rectangles, precise shapes. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/geometric.webp"
+  },
+  "silhouette": {
+    "generator": "built-in image_gen",
+    "original": "exec-0d0018a9-25e1-446b-bca3-fd4381619d0e.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: solid black silhouette, recognizable contours, no internal detail. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/silhouette.webp"
+  },
+  "negative-space": {
+    "generator": "built-in image_gen",
+    "original": "exec-167b9da9-425b-439f-af8e-3f20c9c259b4.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: negative space graphic, interlocking positive negative shapes, two colors. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/negative-space.webp"
+  },
+  "art-deco": {
+    "generator": "built-in image_gen",
+    "original": "exec-d344adf7-7693-45a6-9d28-d5c778daf9f7.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: Art Deco, symmetrical stepped geometry, gold and dark teal. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/art-deco.webp"
+  },
+  "art-nouveau": {
+    "generator": "built-in image_gen",
+    "original": "exec-8aa7b014-8c01-472b-8ac8-24ba76f450b3.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: Art Nouveau, flowing botanical curves, sinuous ornamental outlines. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/art-nouveau.webp"
+  },
+  "anime": {
+    "generator": "built-in image_gen",
+    "original": "exec-75cf92f0-4090-4e2e-8370-2c52ab12ec34.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: original anime illustration, clean linework, cel shading. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/anime.webp"
+  },
+  "lofi-cartoon": {
+    "generator": "built-in image_gen",
+    "original": "exec-1b9d99a8-ce60-4403-b764-a5d856da7365.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: lo-fi cartoon, flat colors, imperfect wobbly outlines. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/lofi-cartoon.webp"
+  },
+  "chibi": {
+    "generator": "built-in image_gen",
+    "original": "exec-fe99e34a-b645-4506-8df1-c6c39c4cd2d0.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: chibi character, oversized head, tiny body, rounded features. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/chibi.webp"
+  },
+  "manga-screentone": {
+    "generator": "built-in image_gen",
+    "original": "exec-b5f925b0-4b84-40e3-beb9-4b9fa3f3cdd7.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: black white manga, crisp ink lines, screentone shading. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/manga-screentone.webp"
+  },
+  "american-comic": {
+    "generator": "built-in image_gen",
+    "original": "exec-65ccf52e-b5ad-46e4-a0e5-9b144d2384c3.png",
+    "prompt": "A single square educational art style example, one individual artwork, not a grid. One orange tabby cat sitting front-facing, full body visible, curled tail to the right, small potted leafy plant to its left, centered balanced composition, quiet cream background. Maintain these subjects and framing across a comparative series. Entire image rendered decisively as: American comic book, bold ink contours, saturated colors, cel shadows. Strongly emphasize the distinctive technique, material texture, shape vocabulary of this medium rather than realistic fur. Monochrome and alternative ground colors are appropriate when intrinsic to this medium. No words, labels, lettering, watermark, logo or existing characters. Professional quality.",
+    "image": "/style-previews/v2/american-comic.webp"
+  },
+  "clay": {
+    "generator": "built-in image_gen",
+    "original": "exec-ded2eb89-723e-491f-89d6-f8670a82318c.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: hand sculpted clay miniature, matte plasticine, subtle fingerprints. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/clay.webp"
+  },
+  "ceramic": {
+    "generator": "built-in image_gen",
+    "original": "exec-dc064c34-2619-4e04-afae-f64f10317281.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: glazed ceramic figurine, glossy fired glaze, pottery. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/ceramic.webp"
+  },
+  "wood-carving": {
+    "generator": "built-in image_gen",
+    "original": "exec-f80e2342-eca3-4902-bd6f-515cdecb8b83.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: carved wooden figurine, visible grain, chisel facets. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/wood-carving.webp"
+  },
+  "stone-carving": {
+    "generator": "built-in image_gen",
+    "original": "exec-2f57c777-38a3-438c-b7b7-9615883d5a47.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: limestone sculpture, chiseled planes, porous mineral texture. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/stone-carving.webp"
+  },
+  "bronze": {
+    "generator": "built-in image_gen",
+    "original": "exec-339cd4ae-27b4-4177-b901-dc10390774d9.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: cast bronze sculpture, green patina, warm metallic highlights. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/bronze.webp"
+  },
+  "glass": {
+    "generator": "built-in image_gen",
+    "original": "exec-2c603ba3-b329-43e2-ad73-53fccb0fdaf4.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: blown glass sculpture, translucent amber teal, refraction. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/glass.webp"
+  },
+  "stained-glass": {
+    "generator": "built-in image_gen",
+    "original": "exec-24ae71fb-db9a-4914-8f6b-373fdfb43d68.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: stained glass panel, colored segments, lead came outlines, transmitted light. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/stained-glass.webp"
+  },
+  "mosaic": {
+    "generator": "built-in image_gen",
+    "original": "exec-10e3660f-9db1-4094-a8f7-4909f5492639.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: ceramic tile mosaic, colored tesserae, visible grout. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/mosaic.webp"
+  },
+  "balloon": {
+    "generator": "built-in image_gen",
+    "original": "exec-75ac5886-c7ea-487f-9d63-fa022d7fcfa3.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: twisted balloon sculpture, glossy latex tubes, visible twists. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/balloon.webp"
+  },
+  "sand-art": {
+    "generator": "built-in image_gen",
+    "original": "exec-f409c9a7-7634-4a04-955d-0586c8f1c750.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: sand sculpture, fine granular sand, shaped relief. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/sand-art.webp"
+  },
+  "photorealistic": {
+    "generator": "built-in image_gen",
+    "original": "exec-b8fb17e9-2d7f-41a8-88da-57ac5a962310.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: realistic photograph, believable fur, soft daylight, neutral perspective. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/photorealistic.webp"
+  },
+  "film-photo": {
+    "generator": "built-in image_gen",
+    "original": "exec-6e25f97d-1d4d-478b-a561-9e8b70b00af8.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: 35mm film photograph, fine grain, gentle halation, faded color. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/film-photo.webp"
+  },
+  "black-white-photo": {
+    "generator": "built-in image_gen",
+    "original": "exec-680b78c3-e9ce-4e93-b680-c39a6d905b7d.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: black white fine art photograph, rich grayscale, directional light. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/black-white-photo.webp"
+  },
+  "high-key": {
+    "generator": "built-in image_gen",
+    "original": "exec-134e2536-2079-40aa-83d3-253075e12524.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: high key studio photograph, bright cream ground, low contrast, open shadows. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/high-key.webp"
+  },
+  "low-key": {
+    "generator": "built-in image_gen",
+    "original": "exec-fab42c01-728a-4084-8b64-d1085efed229.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: low key studio photograph, dark ground, narrow rim light, deep shadows. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/low-key.webp"
+  },
+  "golden-hour": {
+    "generator": "built-in image_gen",
+    "original": "exec-d3f84edb-db9b-4a51-96e7-212486b9402f.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: golden hour photograph, warm low angle sun, golden rim light. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/golden-hour.webp"
+  },
+  "cinematic": {
+    "generator": "built-in image_gen",
+    "original": "exec-b7d4ebde-e8ac-4726-94e3-da2ca80dcd46.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: cinematic photograph, teal shadows, warm highlights, atmospheric depth. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/cinematic.webp"
+  },
+  "macro": {
+    "generator": "built-in image_gen",
+    "original": "exec-7fb13901-614f-4020-9d4b-492eb2b14205.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: macro lens photograph of miniature subject, shallow focus, tactile detail. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/macro.webp"
+  },
+  "infrared": {
+    "generator": "built-in image_gen",
+    "original": "exec-5b65f20e-f6d7-417b-a1cf-d5cc0f3dc1c7.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: false color infrared photograph, pale pink foliage, cyan shadows. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/infrared.webp"
+  },
+  "duotone-photo": {
+    "generator": "built-in image_gen",
+    "original": "exec-00b01c07-6169-41c8-8c9c-cbb29d8cda9a.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: duotone photographic print, teal shadows, orange highlights, two ink hues. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/duotone-photo.webp"
+  },
+  "pixel": {
+    "generator": "built-in image_gen",
+    "original": "exec-1dc8e7f8-ab2f-4f97-a572-0575c6c1ec90.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: pixel art sprite, crisp square pixels, limited retro palette, no smoothing. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/pixel.webp"
+  },
+  "lowpoly": {
+    "generator": "built-in image_gen",
+    "original": "exec-6a520058-fea0-428a-9d72-800abd726e04.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: low poly 3D, flat triangular facets, geometric forms. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/lowpoly.webp"
+  },
+  "voxel": {
+    "generator": "built-in image_gen",
+    "original": "exec-b2323b6c-6dd6-4a6b-afcc-c4b9cc9c7e4f.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: voxel art, cubic blocks, stepped block geometry. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/voxel.webp"
+  },
+  "isometric": {
+    "generator": "built-in image_gen",
+    "original": "exec-08d47937-daa6-4a2f-82a0-bacefceb18e6.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: isometric illustration, parallel projection, clean 3D geometry. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/isometric.webp"
+  },
+  "fantasy": {
+    "generator": "built-in image_gen",
+    "original": "exec-eeb6cd2c-ce1f-4ff3-be13-6d7991e3d52f.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: fantasy concept illustration, magical glow, ornate detail, painterly. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/fantasy.webp"
+  },
+  "steampunk": {
+    "generator": "built-in image_gen",
+    "original": "exec-f8829905-dcbc-4803-b9d1-610aeb3395c9.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: steampunk, Victorian brass gears, copper mechanical accessories. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/steampunk.webp"
+  },
+  "cyberpunk": {
+    "generator": "built-in image_gen",
+    "original": "exec-7efe4719-71ae-4d45-a527-16fb7a01ae7b.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: cyberpunk, neon cyan magenta, futuristic electronic accessories. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/cyberpunk.webp"
+  },
+  "synthwave": {
+    "generator": "built-in image_gen",
+    "original": "exec-9d8af988-402f-4a38-9b78-c17b1496650e.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: synthwave, 1980s neon gradients, magenta orange electric blue glow. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/synthwave.webp"
+  },
+  "glitch": {
+    "generator": "built-in image_gen",
+    "original": "exec-cd7b016c-aaf5-42d9-8f95-33e921399b8b.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: glitch art, RGB displacement, pixel shifts, signal distortion. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/glitch.webp"
+  },
+  "surreal": {
+    "generator": "built-in image_gen",
+    "original": "exec-4a59ccec-7d5a-41d7-a2c0-ccd6bf616bc6.png",
+    "prompt": "Single square educational style-reference artwork. Show one seated orange tabby cat facing front, full body, curled tail to the right, one small leafy potted plant to its left. Balanced central composition and uncluttered cream ground; change ground color only if the style requires it. Entire artwork rendered unmistakably as: surreal illustration, dreamlike floating fragments, impossible coherent relationships. Emphasize the characteristic material, geometry, light and texture, distinct from generic illustration. Same subjects and framing as a comparative series, but respect the specified style; for isometric use an elevated parallel projection, for photographic media use a believable real cat, and for monochrome media use grayscale. No text, labels, grid, signature, watermark, brand or existing franchise characters. One individual high quality artwork.",
+    "image": "/style-previews/v2/surreal.webp"
+  },
+  "ligne-claire": {
+    "generator": "built-in image_gen",
+    "original": "exec-0a8b61c8-6e17-431e-8eb5-1c5c74af7e7e.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically ligne claire comic, uniform precise outlines, flat color, no hatching. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/ligne-claire.webp"
+  },
+  "rubber-hose": {
+    "generator": "built-in image_gen",
+    "original": "exec-b9b54563-ed2c-4913-bb36-ce50793625b6.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically 1930s rubber hose cartoon, bendy tube limbs, pie-cut eyes. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/rubber-hose.webp"
+  },
+  "storybook": {
+    "generator": "built-in image_gen",
+    "original": "exec-4720af5c-d588-4280-9926-683cd1c2dedf.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically children storybook illustration, soft painted shapes, gentle warm mood. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/storybook.webp"
+  },
+  "cel-animation": {
+    "generator": "built-in image_gen",
+    "original": "exec-a1a5d53d-6cea-4995-938a-e4e204ae271c.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically hand painted cel animation, opaque cel colors, painted backdrop, film texture. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/cel-animation.webp"
+  },
+  "webtoon": {
+    "generator": "built-in image_gen",
+    "original": "exec-e841d8f3-49bc-4850-ae50-3b66e05c3e28.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically webtoon illustration, polished digital linework, soft gradient shadows. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/webtoon.webp"
+  },
+  "grainy": {
+    "generator": "built-in image_gen",
+    "original": "exec-4af64ab3-6c44-4e52-b68b-3f7d8d264d0d.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically risograph, two orange teal spot inks, halftone grain, misregistration. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/grainy.webp"
+  },
+  "woodcut": {
+    "generator": "built-in image_gen",
+    "original": "exec-125ce9fb-3b98-415d-84ff-51740038e883.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically woodcut print, bold carved black lines, wood grain, gouge marks. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/woodcut.webp"
+  },
+  "linocut": {
+    "generator": "built-in image_gen",
+    "original": "exec-8432e073-a7fb-4754-9097-a0fe8f60cedc.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically linocut relief print, bold carved shapes, gouged hatching, spot colors. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/linocut.webp"
+  },
+  "etching": {
+    "generator": "built-in image_gen",
+    "original": "exec-7011845c-57b0-494d-aa45-5dd2c2c7cfbb.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically copperplate etching, delicate crosshatching, fine incised lines. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/etching.webp"
+  },
+  "screenprint": {
+    "generator": "built-in image_gen",
+    "original": "exec-7c2af625-1b47-4408-8d2d-5262748d4303.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically screenprint, opaque flat spot inks, crisp layered shapes. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/screenprint.webp"
+  },
+  "lithograph": {
+    "generator": "built-in image_gen",
+    "original": "exec-0c7c7fbc-33a6-461f-b277-dae936c314cb.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically lithograph, greasy crayon grain on stone, soft tonal shading. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/lithograph.webp"
+  },
+  "cyanotype": {
+    "generator": "built-in image_gen",
+    "original": "exec-2b2e37dd-21bb-4971-b3a9-3daad1f235b9.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically cyanotype contact print, Prussian blue ground, pale white details. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/cyanotype.webp"
+  },
+  "ukiyoe": {
+    "generator": "built-in image_gen",
+    "original": "exec-c12a9aa1-24e4-4eb0-a448-26c406f8d49f.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically ukiyo-e woodblock, flowing keyblock outlines, muted flat pigments, washi. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/ukiyoe.webp"
+  },
+  "halftone-pop": {
+    "generator": "built-in image_gen",
+    "original": "exec-d21f7227-0bb8-4011-b64b-8c175a3dd328.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically pop art, bold Ben-Day dots, thick outlines, bright primary colors. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/halftone-pop.webp"
+  },
+  "letterpress": {
+    "generator": "built-in image_gen",
+    "original": "exec-88f7e929-b17d-48d5-8b82-5501b1287785.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically letterpress pictorial print, debossed shapes, thick cotton paper, ink edges. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/letterpress.webp"
+  },
+  "papercut": {
+    "generator": "built-in image_gen",
+    "original": "exec-83a4ca2d-eadf-4159-837e-8ba4cbf5b54c.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically layered cut paper collage, paper fibers, cast shadows, crisp edges. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/papercut.webp"
+  },
+  "origami": {
+    "generator": "built-in image_gen",
+    "original": "exec-395a3201-0528-4e23-873e-69ee495b3298.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically origami sculpture, folded angular planes, realistic paper creases. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/origami.webp"
+  },
+  "quilling": {
+    "generator": "built-in image_gen",
+    "original": "exec-762b451c-3391-4cac-845b-c6292a0d6ae9.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically paper quilling, curled thin strips, spirals, raised paper edges. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/quilling.webp"
+  },
+  "torn-paper": {
+    "generator": "built-in image_gen",
+    "original": "exec-e8bb7b5b-dffb-43bd-b358-a01be0daca61.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically torn paper collage, rough feathered edges, overlapping fragments. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/torn-paper.webp"
+  },
+  "magazine-collage": {
+    "generator": "built-in image_gen",
+    "original": "exec-da74432b-0fe8-45fc-8632-91fbc2154a7b.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically magazine collage, cut photographic fragments, printed textures, no text. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/magazine-collage.webp"
+  },
+  "tissue-collage": {
+    "generator": "built-in image_gen",
+    "original": "exec-4244b523-3f9b-43c3-a2cd-54f011a92cc8.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically translucent tissue paper collage, overlapping delicate colored sheets. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/tissue-collage.webp"
+  },
+  "paper-mosaic": {
+    "generator": "built-in image_gen",
+    "original": "exec-8d2231ae-d92d-4e5b-872e-935e83124df2.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically paper mosaic, tiny irregular colored paper tiles, narrow gaps. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/paper-mosaic.webp"
+  },
+  "pop-up": {
+    "generator": "built-in image_gen",
+    "original": "exec-2bed8bb0-1867-4e73-8ea2-e3219daeba1f.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically pop-up book sculpture, standing folded paper layers, tabs and depth. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/pop-up.webp"
+  },
+  "paper-silhouette": {
+    "generator": "built-in image_gen",
+    "original": "exec-4d5b1066-6def-41b4-95e1-785e37218a10.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically traditional red paper cutting, connected intricate cutouts, folk craft. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/paper-silhouette.webp"
+  },
+  "paper-pulp": {
+    "generator": "built-in image_gen",
+    "original": "exec-988047e6-b069-4286-a524-c1f4e9da9897.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically molded paper pulp relief, rough recycled fibers, rounded sculpted forms. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/paper-pulp.webp"
+  },
+  "embroidery": {
+    "generator": "built-in image_gen",
+    "original": "exec-8c1e857a-3dc6-4778-bd51-bad9c3dae82f.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically hand embroidery, satin stitches, thread fibers on cream linen. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/embroidery.webp"
+  },
+  "cross-stitch": {
+    "generator": "built-in image_gen",
+    "original": "exec-d44ac559-533c-4fad-880a-6c14ab697516.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically cross stitch artwork, visible X-shaped stitches, aida cloth. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/cross-stitch.webp"
+  },
+  "needle-felt": {
+    "generator": "built-in image_gen",
+    "original": "exec-dff39a67-68b1-4fed-a46e-2f8f52df0dc2.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically needle felted wool sculpture, fuzzy fibers, rounded handmade forms. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/needle-felt.webp"
+  },
+  "crochet": {
+    "generator": "built-in image_gen",
+    "original": "exec-b1a9f84d-027b-44ab-b0f1-407c12ffd97b.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically crocheted amigurumi, visible yarn loops, stuffed textile. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/crochet.webp"
+  },
+  "knitted": {
+    "generator": "built-in image_gen",
+    "original": "exec-87c5ed8a-68a8-4cbe-a1fd-d4000a5e9e7c.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically knitted intarsia, visible V-shaped wool stitches, flat knit. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/knitted.webp"
+  },
+  "patchwork": {
+    "generator": "built-in image_gen",
+    "original": "exec-8f86ba50-5433-46cd-9d9f-a282c486c2f7.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically patchwork quilt, stitched fabric panels, woven cloth textures. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/patchwork.webp"
+  },
+  "applique": {
+    "generator": "built-in image_gen",
+    "original": "exec-39f373e9-5b6c-4389-8ef8-9dc4335c4b30.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically fabric applique, layered cut cloth, blanket stitch borders. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/applique.webp"
+  },
+  "tapestry": {
+    "generator": "built-in image_gen",
+    "original": "exec-f9447673-a0f1-44eb-a860-72b885a30004.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically woven tapestry, visible warp weft, muted wool colors. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/tapestry.webp"
+  },
+  "batik": {
+    "generator": "built-in image_gen",
+    "original": "exec-d553e6f8-39d5-4722-a129-efd1f087e24a.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically batik textile, wax resist crackle, indigo ochre dyes. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/batik.webp"
+  },
+  "tufted-rug": {
+    "generator": "built-in image_gen",
+    "original": "exec-f2afcb73-aa40-4e1d-ae42-40fdaf682924.png",
+    "prompt": "One square individual educational artwork, not a collage grid. Subject: one orange tabby cat seated facing front, full body visible, curled tail on right, a small leafy plant in a pot on its left, centered composition, neutral cream background. Same subjects and framing as a comparative style series. Style is specifically tufted rug, thick raised cut pile yarn, plush colored shapes. Render all shapes, textures, lines and light in this medium. Make its defining visual characteristics obvious at thumbnail size. Grayscale, altered color and dark background allowed when required by this technique. No lettering, labels, logo, watermark, signature, franchise characters. High quality classroom reference.",
+    "image": "/style-previews/v2/tufted-rug.webp"
+  }
+}

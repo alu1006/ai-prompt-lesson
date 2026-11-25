@@ -1,6 +1,7 @@
 import { DETAIL_CATEGORIES } from '../../data/detailOptions.js'
+import ColorPalette from '../ColorPalette.jsx'
 
-export default function DetailsStep({ details, onChange, onNext, onPrev }) {
+export default function DetailsStep({ details, onChange, palette, onPaletteChange, onNext, onPrev }) {
   const toggle = (key, option) => {
     const current = details[key]
     onChange(key, current?.zh === option.zh ? null : option)
@@ -13,6 +14,7 @@ export default function DetailsStep({ details, onChange, onNext, onPrev }) {
         <p>每個類別可選一項（也可以跳過）——點擊圖片卡來選擇</p>
       </div>
 
+      <ColorPalette value={palette} onChange={onPaletteChange} />
       <div className="details-categories">
         {DETAIL_CATEGORIES.map(cat => (
           <div key={cat.key} className="detail-cat">
@@ -59,7 +61,7 @@ export default function DetailsStep({ details, onChange, onNext, onPrev }) {
       <div className="step-nav">
         <button className="btn-prev" onClick={onPrev}>← 上一步</button>
         <button className="btn-next" onClick={onNext}>
-          完成，查看 Prompt →
+          下一步：選擇產品 →
         </button>
       </div>
     </div>

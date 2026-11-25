@@ -14,6 +14,7 @@ __pycache__/
 !web/public/**/*.jpg
 *.json
 !web/public/art_data.json
+!web/public/style-previews/v2/generation.json
 !web/src/**/*.json
 !package.json
 !web/package.json

@@ -65,7 +65,7 @@ export default function SavedPromptsPage({ userPrompts, onDelete, onClose }) {
 
                 <div className="saved-tags">
                   {p.tags.map(t => (
-                    <span key={t.label} className="prompt-tag">
+                    <span key={`${t.label}-${t.value}`} className="prompt-tag">
                       <span className="prompt-tag-label">{t.label}</span>
                       <span className="prompt-tag-value">{t.value}</span>
                     </span>

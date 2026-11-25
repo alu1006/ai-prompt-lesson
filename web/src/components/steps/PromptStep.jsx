@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { palettePrompt } from '../../utils/palette.js'
 
 function buildPrompts(selection) {
   const { subject, styles = [], action, scene, angle, lighting, mood, product } = selection
+  const palette = palettePrompt(selection.palette)
 
   // ── 中文 prompt ──
   const zhParts = []
@@ -13,6 +15,7 @@ function buildPrompts(selection) {
   if (lighting?.zh) zhParts.push(lighting.zh)
   if (mood?.zh) zhParts.push(`${mood.zh}氛圍`)
   if (product?.id && product.id !== 'none') zhParts.push(`去背、適合印製於${product.name_zh}`)
+  if (palette.zh) zhParts.push(palette.zh)
 
   // ── English prompt ──
   const enParts = []
@@ -24,7 +27,7 @@ function buildPrompts(selection) {
   if (lighting?.en) enParts.push(lighting.en)
   if (mood?.en) enParts.push(mood.en)
   if (product?.prompt_en) enParts.push(product.prompt_en)
-  enParts.push('highly detailed, award-winning')
+  if (palette.en) enParts.push(palette.en)
 
   return {
     zh: zhParts.join('，'),
@@ -67,6 +70,7 @@ export default function PromptStep({ selection, onPrev, onSave }) {
       ].filter(Boolean),
       prompt_zh: zh,
       prompt_en: en,
+      palette: selection.palette,
     })
     setSaved(true)
   }
@@ -92,7 +96,7 @@ export default function PromptStep({ selection, onPrev, onSave }) {
       {/* Tags summary */}
       <div className="prompt-tags-summary">
         {tags.map(t => (
-          <span key={t.label} className="prompt-tag">
+          <span key={`${t.label}-${t.value}`} className="prompt-tag">
             <span className="prompt-tag-label">{t.label}</span>
             <span className="prompt-tag-value">{t.value}</span>
           </span>
@@ -100,6 +104,7 @@ export default function PromptStep({ selection, onPrev, onSave }) {
       </div>
 
       {/* Chinese prompt */}
+      {selection.palette?.enabled && <div className="prompt-palette-summary" aria-label="所選配色">{selection.palette.colors.map((hex, index) => <span key={index}><i style={{ background: hex }} />{hex}</span>)}</div>}
       <div className="prompt-block">
         <div className="prompt-block-header">
           <span className="prompt-block-title">中文提示詞</span>
@@ -142,7 +147,7 @@ export default function PromptStep({ selection, onPrev, onSave }) {
       </div>
 
       <div className="step-nav">
-        <button className="btn-prev" onClick={onPrev}>← 返回修改細節</button>
+        <button className="btn-prev" onClick={onPrev}>← 返回選擇產品</button>
         <button className="btn-next" onClick={handleSave} disabled={saved}>
           {saved ? '✓ 已收藏' : '收藏此 Prompt'}
         </button>

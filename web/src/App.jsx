@@ -6,6 +6,7 @@ import StyleStep from './components/steps/StyleStep.jsx'
 import DetailsStep from './components/steps/DetailsStep.jsx'
 import ProductStep from './components/steps/ProductStep.jsx'
 import PromptStep from './components/steps/PromptStep.jsx'
+import { DEFAULT_PALETTE } from './utils/palette.js'
 
 const STEPS = [
   { id: 'intro',   label: '關於 AI' },
@@ -28,6 +29,7 @@ export default function App() {
     prev.find(x => x.id === s.id) ? prev.filter(x => x.id !== s.id) : [...prev, s]
   )
   const [details, setDetails] = useState(EMPTY_DETAILS)
+  const [palette, setPalette] = useState(DEFAULT_PALETTE)
   const [product, setProduct] = useState(null)
   const [showSaved, setShowSaved] = useState(false)
   const [savedPrompts, setSavedPrompts] = useState(() => {
@@ -59,7 +61,7 @@ export default function App() {
   const prev = () => setStep(s => Math.max(s - 1, 0))
   const goTo = (i) => setStep(i)
 
-  const selection = { subject, styles, ...details, product }
+  const selection = { subject, styles, ...details, product, palette }
 
   return (
     <div className="wizard-app">
@@ -91,6 +93,7 @@ export default function App() {
             key={s.id}
             className={`wizard-step-btn${i === step ? ' active' : ''}${i < step ? ' done' : ''}`}
             onClick={() => goTo(i)}
+            aria-label={`第 ${i + 1} 步：${s.label}`}
             aria-current={i === step ? 'step' : undefined}
           >
             <span className="wsb-num">{i < step ? '✓' : i + 1}</span>
@@ -125,6 +128,8 @@ export default function App() {
         )}
         {step === 3 && (
           <DetailsStep
+            palette={palette}
+            onPaletteChange={setPalette}
             details={details}
             onChange={updateDetail}
             onNext={next}
