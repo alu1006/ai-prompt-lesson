@@ -22,3 +22,8 @@ __pycache__/
 
 # Playwright logs
 .playwright-mcp/
+
+# Remotion 動畫專案
+!animation/package.json
+!animation/package-lock.json
+!animation/tsconfig.json
