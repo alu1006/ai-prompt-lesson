@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { DETAIL_CATEGORIES } from '../../data/detailOptions.js'
 import ColorPalette from '../ColorPalette.jsx'
+import ReferenceImage from '../ReferenceImage.jsx'
 
 function DetailOption({ option, selected, onClick }) {
-  const [failed, setFailed] = useState(false)
   return <button type="button" className={`detail-reference${selected ? ' selected' : ''}`} aria-pressed={selected} onClick={onClick}>
-    {option.img && !failed && <img src={option.img} alt={`${option.zh}示意`} loading="lazy" decoding="async" width="96" height="96" onError={() => setFailed(true)} />}
+    <ReferenceImage src={option.img} alt={`${option.zh}示意`} diagram={option.img.endsWith('.svg')} />
     <div className="detail-reference-copy"><strong>{option.zh}</strong><span>{option.desc}</span><small lang="en">{option.en}</small></div>
     {selected && <span className="detail-reference-check" aria-hidden="true">✓</span>}
   </button>
@@ -23,7 +23,7 @@ export default function DetailsStep({ details, onChange, palette, onPaletteChang
   return <div className="wizard-step-page">
     <div className="step-heading"><h2>細節設定</h2><p>12 類、144 個細節參考。每類選一項，也可以跳過；先挑 2～3 個重點，再觀察生成結果。</p></div>
     <ColorPalette value={palette} onChange={onPaletteChange} />
-    <div className="detail-library-heading"><span className="style-library-kicker">DETAIL LIBRARY · 144</span><h3>用細節，讓想像更具體</h3><p>有生命的主體可以選動作、表情與服裝；建築或物件可從場景、構圖與材質開始。每個選項都有英文與觀察提示。</p></div>
+    <div className="detail-library-heading"><span className="style-library-kicker">DETAIL LIBRARY · 144</span><h3>用細節，讓想像更具體</h3><p>有生命的主體可以選動作、表情與服裝；建築或物件可從場景、構圖與材質開始。每個選項都有配圖、英文與觀察提示。配圖為生成示意；構圖與比例使用精確圖解。</p></div>
     <label className="library-search-label">搜尋細節參考<input type="search" value={query} onChange={e => setQuery(e.target.value)} placeholder="搜尋逆光、留白、雪、macro…" /></label>
     <div className="detail-level-tabs" aria-label="細節範圍">{[['basic','基本細節'],['advanced','進階細節'],['all','全部細節']].map(([id, name]) => <button key={id} type="button" aria-pressed={level === id} onClick={() => setLevel(id)}>{name}</button>)}</div>
     <div className="library-result-line"><span role="status">顯示 {count} / 144 個選項{term ? '（搜尋全部分類）' : ''} · 已選 {selected.length} / 12 類</span>{query && <button type="button" onClick={() => setQuery('')}>清除搜尋</button>}</div>

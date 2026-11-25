@@ -93,4 +93,6 @@ painting: { id, name_zh, name_en, image_url? }
 
 **Style asset workflow:** Use built-in image generation for individual images. `scripts/import-style-images.py <local-manifest.json>` encodes originals as 768px WebP and records provenance without altering source PNGs. `node scripts/export-style-reference.mjs <absolute-directory>` exports all 100 images with a UTF-8 CSV and prompts for teacher reference.
 
+**Subject/detail images:** Each of the 120 subjects has a stable ordinal `sNN-NN` reference under `subject-previews/v1/`; keep group/entry order stable when editing. Missing detail images use `d-<category>-NN` under `detail-previews/v1/`. `scripts/import-reference-images.py <manifest.json>` encodes 204 independently generated originals to 640px WebP and writes `reference-generation.json`; existing 36 tag images remain. `node scripts/generate-reference-diagrams.mjs` builds 24 SVG composition/aspect-ratio diagrams. Do not replace precise ratio diagrams with approximate generated rectangles. `ReferenceImage.jsx` provides shared lazy loading, accessible text and visible failure handling.
+
 > **Note:** `GeneratorModal.jsx` is legacy code from the previous architecture (MovementCard browse → modal generate flow). The current entry point is the wizard in `App.jsx`.

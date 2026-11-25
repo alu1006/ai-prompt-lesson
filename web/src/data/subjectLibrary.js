@@ -61,8 +61,10 @@ const GROUPS = [
   ]],
 ]
 
-export const SUBJECT_CATEGORIES = GROUPS.map(([label, icon, entries]) => ({
-  label, icon, presets: entries.map(([zh, en]) => ({ zh, en, category: label })),
+export const SUBJECT_CATEGORIES = GROUPS.map(([label, icon, entries], categoryIndex) => ({
+  label, icon, presets: entries.map(([zh, en], index) => ({ zh, en, category: label,
+    img: `/subject-previews/v1/s${String(categoryIndex + 1).padStart(2, '0')}-${String(index + 1).padStart(2, '0')}.webp`,
+  })),
 }))
 export const SUBJECT_PRESETS = SUBJECT_CATEGORIES.flatMap(c => c.presets)
 const ENGLISH = new Map(SUBJECT_PRESETS.map(s => [s.zh, s.en]))

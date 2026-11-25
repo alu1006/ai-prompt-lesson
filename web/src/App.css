@@ -677,6 +677,12 @@ body {
 .subject-reference strong { font-size: .88rem; color: #382e1e; }
 .subject-reference span[lang=en] { font-size: .73rem; color: #746957; line-height: 1.5; overflow-wrap: anywhere; }
 .subject-reference-category { color: #8a795a; font-size: .65rem; }
+.subject-reference-copy { display: flex; flex-direction: column; gap: .35rem; padding: .8rem; }
+.subject-reference:has(.reference-image), .subject-reference:has(.reference-image-error) { padding: 0; overflow: hidden; gap: 0; }
+.reference-image { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; background: #f4eee1; }
+.detail-reference .reference-image { height: auto; aspect-ratio: 1; }
+.reference-image.reference-image--diagram { object-fit: contain; }
+.reference-image-error { display: grid; place-content: center; width: 100%; aspect-ratio: 1; background: #eee7d8; color: #796d56; font-size: .75rem; }
 .subject-english-preview { font-size: .8rem; color: #5f6855; }
 .library-footnote { font-size: .76rem; line-height: 1.7; color: #746957; }
 .detail-library-heading h3 { margin: .45rem 0; font-size: 1.4rem; }

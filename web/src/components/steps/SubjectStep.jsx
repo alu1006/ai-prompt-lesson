@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { SUBJECT_CATEGORIES, searchSubjects, subjectEnglish } from '../../data/subjectPresets.js'
+import ReferenceImage from '../ReferenceImage.jsx'
 
 export default function SubjectStep({ value, onChange, onNext, onPrev }) {
   const [activeCategory, setActiveCategory] = useState('')
@@ -57,9 +58,12 @@ export default function SubjectStep({ value, onChange, onNext, onPrev }) {
             aria-pressed={value === preset.zh}
             onClick={() => onChange(value === preset.zh ? '' : preset.zh)}
           >
+            <ReferenceImage src={preset.img} alt={`${preset.zh}示意`} />
+            <div className="subject-reference-copy">
             <span className="subject-reference-category">{preset.category}</span>
             <strong>{preset.zh}</strong>
             <span lang="en">{preset.en}</span>
+            </div>
           </button>
         ))}
       </div>
@@ -74,6 +78,7 @@ export default function SubjectStep({ value, onChange, onNext, onPrev }) {
         </div>
       )}
       <p className="library-footnote">預設主體會附英文對照；自由輸入會保留原文，也可以直接使用中文提示詞。</p>
+      <p className="library-footnote">主體配圖為 AI 生成參考，供辨識特徵與構思使用；實際生成結果會依提示詞改變。</p>
 
       <div className="step-nav">
         <button className="btn-prev" onClick={onPrev}>← 上一步</button>

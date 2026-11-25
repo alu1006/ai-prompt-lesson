@@ -180,10 +180,15 @@ const ADVANCED = [
   ]],
 ]
 
-export const DETAIL_CATEGORIES = [
+const ALL_CATEGORIES = [
   ...ORIGINAL_CATEGORIES.map(category => ({ ...category, level: 'basic',
     options: [...category.options.map(o => ({ ...o, desc: NOTES[category.key] })), ...EXTRA[category.key].map(option)],
   })),
   ...ADVANCED.map(([key, label, icon, level, entries]) => ({ key, label, icon, level, options: entries.map(option) })),
 ]
+export const DETAIL_CATEGORIES = ALL_CATEGORIES.map(category => ({ ...category,
+  options: category.options.map((option, index) => ({ ...option,
+    img: option.img || `/detail-previews/v1/d-${category.key}-${String(index + 1).padStart(2, '0')}.${['composition','ratio'].includes(category.key) ? 'svg' : 'webp'}`,
+  })),
+}))
 export const EMPTY_DETAILS = Object.fromEntries(DETAIL_CATEGORIES.map(c => [c.key, null]))
