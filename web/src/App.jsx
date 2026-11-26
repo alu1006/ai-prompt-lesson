@@ -15,7 +15,7 @@ const STEPS = [
   { id: 'subject', label: '主體', en: 'SUBJECT' },
   { id: 'style',   label: '風格', en: 'STYLE' },
   { id: 'details', label: '細節', en: 'DETAILS' },
-  { id: 'product', label: '產品', en: 'OBJECTS' },
+  { id: 'product', label: '用途', en: 'PURPOSE' },
   { id: 'prompt',  label: 'Prompt', en: 'YOUR PROMPT' },
 ]
 

@@ -1,29 +1,18 @@
 import { useState } from 'react'
 import { buildPrompts, selectionTags } from '../../utils/prompts.js'
-
-function CopyButton({ text }) {
-  const [copied, setCopied] = useState(false)
-  const copy = () => {
-    navigator.clipboard.writeText(text).then(() => {
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    })
-  }
-  return (
-    <button className="btn-copy" onClick={copy}>
-      {copied ? '✓ 已複製' : '複製'}
-    </button>
-  )
-}
+import { isTurnaround } from '../../data/turnaroundPrompt.js'
+import AssistantLaunch from '../AssistantLaunch.jsx'
+import CopyButton from '../CopyButton.jsx'
 
 export default function PromptStep({ selection, onPrev, onSave }) {
   const [saved, setSaved] = useState(false)
   const { zh, en } = buildPrompts(selection)
+  const turnaround = isTurnaround(selection)
 
   const handleSave = () => {
     onSave({
       id: `user-${Date.now()}`,
-      title: selection.subject || '我的 Prompt',
+      title: turnaround ? '手繪角色三視圖' : selection.subject || '我的 Prompt',
       tags: selectionTags(selection),
       prompt_zh: zh,
       prompt_en: en,
@@ -38,8 +27,8 @@ export default function PromptStep({ selection, onPrev, onSave }) {
   return (
     <div className="wizard-step-page">
       <div className="step-heading">
-        <h2>你的 Prompt 完成了！</h2>
-        <p>以下是根據你的選擇組合出的提示詞，複製後可貼到 AI 工具使用</p>
+        <h2>{turnaround ? '手繪角色三視圖 Prompt' : '你的 Prompt 完成了！'}</h2>
+        <p>{turnaround ? '複製完整範本，並在生成工具中一起上傳手繪草圖。' : '以下是根據你的選擇組合出的提示詞，複製後可貼到 AI 工具使用'}</p>
       </div>
 
       {/* Tags summary */}
@@ -53,7 +42,8 @@ export default function PromptStep({ selection, onPrev, onSave }) {
       </div>
 
       {/* Chinese prompt */}
-      {selection.palette?.enabled && <div className="prompt-palette-summary" aria-label="所選配色">{selection.palette.colors.map((hex, index) => <span key={index}><i style={{ background: hex }} />{hex}</span>)}</div>}
+      {turnaround && <div className="turnaround-note"><strong>先上傳草圖，再貼上 Prompt</strong><p>這個範本以你上傳的手繪角色為準，保留原始比例與手繪感。一般的主體、風格、配色與細節選擇不會加入三視圖範本。</p><p>若側面或背面在草圖中沒有呈現，請補充關鍵特徵；生成後再檢查三個視角是否一致。</p></div>}
+      {!turnaround && selection.palette?.enabled && <div className="prompt-palette-summary" aria-label="所選配色">{selection.palette.colors.map((hex, index) => <span key={index}><i style={{ background: hex }} />{hex}</span>)}</div>}
       <div className="prompt-block">
         <div className="prompt-block-header">
           <span className="prompt-block-title">中文提示詞</span>
@@ -66,37 +56,27 @@ export default function PromptStep({ selection, onPrev, onSave }) {
       <div className="prompt-block">
         <div className="prompt-block-header">
           <span className="prompt-block-title">English Prompt</span>
-          <span className="prompt-block-hint">預設主體附英文；自訂描述保留原文</span>
+          <span className="prompt-block-hint">{turnaround ? '完整三視圖範本的英文版本' : '預設主體附英文；自訂描述保留原文'}</span>
           <CopyButton text={en} />
         </div>
         <div className="prompt-block-text en">{en}</div>
       </div>
 
-      {/* Gemini CTA */}
-      <a
-        className="btn-gemini-cta"
-        href="https://gemini.google.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span className="btn-gemini-icon">✦</span>
-        前往 Gemini 生成圖像
-        <span className="btn-gemini-sub">複製上方 Prompt 貼入即可</span>
-      </a>
+      <AssistantLaunch zh={zh} en={en} turnaround={turnaround} />
 
       {/* Usage tips */}
       <div className="prompt-tips">
         <h4>怎麼使用這個 Prompt？</h4>
         <ol>
-          <li>複製上方的中文提示詞 / English Prompt</li>
-          <li>點擊上方按鈕前往 Gemini</li>
-          <li>貼入文字框後按下生成，等待 10–30 秒</li>
-          <li>可以調整描述、重新選擇細節，看看效果有什麼不同！</li>
+          <li>選擇要帶入的中文提示詞 / English Prompt</li>
+          <li>點擊 ChatGPT 或 Gemini 入口；未自動帶入時貼上提示詞</li>
+          <li>{turnaround ? '上傳手繪草圖，再貼入提示詞並要求生成圖像' : '貼入文字框後要求生成圖像'}</li>
+          <li>{turnaround ? '檢查正面、側面、背面的頭身比例、服裝、髮型、道具與特徵是否一致' : '可以調整描述、重新選擇細節，看看效果有什麼不同！'}</li>
         </ol>
       </div>
 
       <div className="step-nav">
-        <button className="btn-prev" onClick={onPrev}>← 返回選擇產品</button>
+        <button className="btn-prev" onClick={onPrev}>← 返回產品／用途</button>
         <button className="btn-next" onClick={handleSave} disabled={saved}>
           {saved ? '✓ 已收藏' : '收藏此 Prompt'}
         </button>

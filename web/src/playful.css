@@ -168,4 +168,43 @@ body { background: var(--paper); }
   .quiz-set-buttons button { font-size: 12px; padding: 11px; }
   .atelier-site .btn-next, .atelier-site .btn-prev { padding: 12px 14px; }
 }
-@media (max-width: 480px) { .atelier-site .guess-grid { grid-template-columns: minmax(0,1fr); } }
+.detail-section-nav { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 12px; margin: 28px 0; }
+.detail-section-nav button { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 9px; min-height: 125px; padding: 16px; border: 2px solid var(--ink); border-radius: 10px; background: white; color: var(--ink); font: inherit; cursor: pointer; text-align: left; }
+.detail-section-nav button[aria-current=step] { background: var(--lime); box-shadow: 4px 4px 0 var(--ink); transform: rotate(-2deg); }
+.detail-section-index { position: absolute; top: 15px; right: 12px; font-size: 10px; font-weight: 800; }
+.detail-section-nav strong { font-size: 19px; font-weight: 900; }
+.detail-section-nav small { font-size: 11px; font-weight: 700; }
+.detail-section-content .detail-library-heading { margin-top: 30px; }
+.detail-section-pager { display: flex; justify-content: space-between; gap: 14px; margin: 30px 0; }
+.detail-section-pager button { border: 1.5px solid var(--ink); border-radius: 8px; background: white; color: var(--ink); padding: 13px 16px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+.detail-section-pager button:last-child { background: var(--lime); }
+.detail-section-pager button:disabled { opacity: .4; cursor: not-allowed; }
+.turnaround-note { border: 2px solid var(--ink); border-radius: 12px; padding: 23px; background: #fff1d9; margin: 25px 0; box-shadow: 4px 4px 0 var(--orange); font-size: 14px; line-height: 1.9; }
+.turnaround-note strong { font-size: 18px; font-weight: 900; }
+.turnaround-note p { margin: 10px 0; }
+.turnaround-note ol { padding-left: 23px; }
+.product-purpose-hint { font-size: 11px; line-height: 1.6; }
+.assistant-launch { margin: 30px 0; padding: 24px; border: 2px solid var(--ink); border-radius: 12px; background: #f1f3e7; }
+.assistant-launch-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 20px; }
+.assistant-launch-heading h3 { font-size: 23px; font-weight: 900; margin: 0; }
+.assistant-launch-heading label { font-size: 12px; font-weight: 700; display: flex; gap: 9px; align-items: center; }
+.assistant-launch-heading select { font: inherit; border: 1.5px solid var(--ink); border-radius: 6px; background: white; color: var(--ink); padding: 10px; }
+.assistant-launch-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+.assistant-link { display: flex; flex-direction: column; gap: 10px; border: 2px solid var(--ink); border-radius: 10px; padding: 23px; text-decoration: none; color: var(--ink); box-shadow: 4px 4px 0 var(--ink); }
+.assistant-link.chatgpt { background: var(--lime); }
+.assistant-link.gemini { background: var(--pink); }
+.assistant-link.gemini { font: inherit; text-align: left; cursor: pointer; }
+.assistant-link:disabled { opacity: .45; cursor: not-allowed; }
+.copy-control { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 9px; font-size: 11px; }
+.copy-control [role=status] { color: #9a3300; }
+.assistant-link strong { display: flex; justify-content: space-between; font-size: 22px; font-weight: 900; }
+.assistant-link > span { font-size: 12px; font-weight: 700; line-height: 1.7; }
+.assistant-link:hover { transform: translate(2px,2px); box-shadow: 2px 2px 0 var(--ink); }
+.assistant-link[aria-disabled=true] { opacity: .45; cursor: not-allowed; }
+.assistant-launch-status, .assistant-upload-reminder { margin: 19px 0 0; font-size: 12px; line-height: 1.8; color: #4e565d; }
+.assistant-upload-reminder { font-weight: 800; color: var(--ink); }
+@media (max-width: 600px) { .assistant-launch { padding: 18px; } .assistant-launch-grid { grid-template-columns: minmax(0,1fr); } }
+.atelier-site .prompt-block-text { white-space: pre-wrap; overflow-wrap: anywhere; }
+.detail-section-nav button:focus-visible, .detail-section-pager button:focus-visible { outline: 3px solid #a33c00; outline-offset: 4px; }
+@media (max-width: 700px) { .detail-section-nav { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 13px; } .detail-section-nav button { min-height: 113px; padding: 13px; } .turnaround-note { padding: 18px; font-size: 13px; } }
+@media (max-width: 480px) { .atelier-site .guess-grid { grid-template-columns: minmax(0,1fr); } .detail-section-nav strong { font-size: 17px; } .detail-section-pager button { font-size: 12px; padding: 12px 10px; } }

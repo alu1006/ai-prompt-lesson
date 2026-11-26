@@ -78,7 +78,7 @@ export default function SubjectStep({ value, onChange, onNext, onPrev }) {
         </div>
       )}
       <p className="library-footnote">預設主體會附英文對照；自由輸入會保留原文，也可以直接使用中文提示詞。</p>
-      <p className="library-footnote">主體配圖為 AI 生成參考，供辨識特徵與構思使用；實際生成結果會依提示詞改變。</p>
+      <p className="library-footnote">主體配圖統一以搞怪橘貓的扮裝、造型或場景變化示範；選項文字才是加入 Prompt 的主體。想沿用橘貓，可在上方描述補上「搞怪橘貓造型」。</p>
 
       <div className="step-nav">
         <button className="btn-prev" onClick={onPrev}>← 上一步</button>

@@ -5,7 +5,7 @@ import { DETAIL_CATEGORIES } from '../web/src/data/detailOptions.js'
 const root = fileURLToPath(new URL('../web/public/', import.meta.url))
 const esc = value => value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
 function cat(x,y,size=1) {
-  return `<g transform="translate(${x} ${y}) scale(${size})"><ellipse cx="0" cy="23" rx="22" ry="29" fill="#cd773d"/><path d="M-23 -7 L-22 -35 L-7 -22 L7 -22 L22 -35 L23 -7Z" fill="#d99052"/><ellipse cx="0" cy="-6" rx="24" ry="20" fill="#e4a46c"/><circle cx="-8" cy="-8" r="2.5" fill="#3e392d"/><circle cx="8" cy="-8" r="2.5" fill="#3e392d"/><path d="M-3 0 L3 0 L0 4Z" fill="#775139"/><path d="M18 40 Q48 45 39 16" fill="none" stroke="#cd773d" stroke-width="9" stroke-linecap="round"/></g>`
+  return `<g data-mascot="quirky-orange-cat" transform="translate(${x} ${y}) scale(${size})" stroke="#25282c" stroke-width="1.8" stroke-linejoin="round"><path d="M18 40C56 66 67 14 43 13C25 12 26 35 43 32C56 28 48 17 40 21" fill="none" stroke="#25282c" stroke-width="10" stroke-linecap="round"/><path d="M18 40C56 66 67 14 43 13C25 12 26 35 43 32C56 28 48 17 40 21" fill="none" stroke="#ff9a45" stroke-width="6" stroke-linecap="round"/><ellipse cx="0" cy="25" rx="23" ry="28" fill="#ff9a45"/><ellipse cx="0" cy="31" rx="12" ry="18" fill="#fff3d1" stroke="none"/><path d="M-23 -7L-22 -35L-7 -22L7 -22L22 -35L23 -7Q28 17 0 17Q-28 17 -23 -7Z" fill="#ff9a45"/><path d="M-6 -20L-4 -13M0 -22L1 -14M7 -20L7 -14" stroke="#b54b16" stroke-width="3"/><ellipse cx="-9" cy="-6" rx="9" ry="11" fill="#fffdf5"/><ellipse cx="10" cy="-5" rx="6" ry="8" fill="#fffdf5"/><ellipse cx="-7" cy="-5" rx="2.4" ry="4" fill="#25282c" stroke="none"/><ellipse cx="9" cy="-4" rx="2" ry="3" fill="#25282c" stroke="none"/><path d="M-2 7L3 7L0 10Z" fill="#25282c"/><path d="M0 11Q3 21 7 12" fill="#ff91b0"/><path d="M-20 48Q-26 58 -12 53M15 49Q26 58 25 49" fill="#ff9a45"/></g>`
 }
 const frame = '<rect x="20" y="65" width="280" height="190" rx="3" fill="#f3ead7" stroke="#9e917a" stroke-width="2"/>'
 const guides = '<g stroke="#8f9f93" stroke-width="1.5" stroke-dasharray="5 5"><path d="M113.333 65V255M206.667 65V255M20 128.333H300M20 191.667H300"/></g>'
@@ -20,7 +20,7 @@ const compositions = [
   frame+`<g clip-path="url(#clip)">${cat(160,155,2.8)}</g>`,
   frame+cat(85,159,.9)+'<path d="M150 90H276M150 110H270M150 130H245" stroke="#c3b79f" stroke-width="3" stroke-dasharray="6 5"/>',
   frame+cat(235,159,.9)+'<path d="M44 90H170M44 110H165M44 130H140" stroke="#c3b79f" stroke-width="3" stroke-dasharray="6 5"/>',
-  frame+'<rect x="55" y="90" width="60" height="90" rx="3" fill="#658574"/><rect x="59" y="94" width="52" height="82" fill="#eee0bf"/><circle cx="220" cy="124" r="27" fill="#d3a76e"/><circle cx="220" cy="124" r="20" fill="#765b42"/><path d="M244 110Q268 108 268 124Q267 142 245 137" fill="none" stroke="#d3a76e" stroke-width="6"/><path d="M140 221L236 221" stroke="#a47e55" stroke-width="10" stroke-linecap="round"/><circle cx="80" cy="215" r="18" fill="#b6c39b"/>',
+  frame+'<rect x="55" y="90" width="60" height="90" rx="3" fill="#658574"/><rect x="59" y="94" width="52" height="82" fill="#eee0bf"/><circle cx="220" cy="124" r="27" fill="#d3a76e"/><circle cx="220" cy="124" r="20" fill="#765b42"/><path d="M244 110Q268 108 268 124Q267 142 245 137" fill="none" stroke="#d3a76e" stroke-width="6"/><path d="M140 221L236 221" stroke="#a47e55" stroke-width="10" stroke-linecap="round"/>'+cat(83,210,.4),
   frame+[85,160,235].flatMap(x=>[115,205].map(y=>cat(x,y,.47))).join(''),
 ]
 
@@ -32,6 +32,7 @@ for (const category of DETAIL_CATEGORIES.filter(c=>['ratio','composition'].inclu
       const scale = Math.min(240/a,210/b), w=a*scale,h=b*scale
       const x=(320-w)/2,y=(300-h)/2
       content=`<rect data-frame="true" x="${x}" y="${y}" width="${w}" height="${h}" fill="#ece0c5" stroke="#8c6b31" stroke-width="2"/><path d="M${x} ${y+h*.7} Q160 ${y+h*.4} ${x+w} ${y+h*.7}V${y+h}H${x}Z" fill="#9eaf91"/><circle cx="${x+w*.7}" cy="${y+h*.25}" r="${Math.min(w,h)*.09}" fill="#d5a251"/><text x="160" y="292" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#705b35">${a}:${b}</text>`
+      content+=cat(160,y+h*.46,Math.min(w,h)/120)
     } else content=compositions[index]
     const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img"><title>${esc(option.zh)}示意</title><defs><clipPath id="clip"><rect x="20" y="65" width="280" height="190"/></clipPath></defs><rect width="320" height="320" fill="#faf7ef"/>${content}</svg>`
     const dest = root + option.img.slice(1)

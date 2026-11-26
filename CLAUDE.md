@@ -48,6 +48,12 @@ React 18 + Vite SPA. Dev server at port 5173 proxies `/api` to port 3001.
 
 **Quiz:** `quizSets.js` preserves four fixed groups of six original real/AI examples. `IntroStep` uses its reducer to start at group one, clamp previous/next at the boundaries, clear answers on group changes, and offer restarting after the fourth group. Never regenerate these examples without checking their real/AI attribution.
 
+**Detail navigation:** `detailSections.js` groups the unchanged 12 categories into six independent entrances: palette, action (action/attire), scene (scene/time/weather/material), camera (angle/composition/ratio), lighting, mood (mood/expression). Searches stay within the active entrance. Selection remains in App, so changing entrances never clears it.
+
+**Turnaround and launch:** ProductStep includes `turnaround`. `turnaroundPrompt.js` contains the user's complete original-character sketch template and English translation. `buildPrompts` and `selectionTags` return only this template and its applicable tags when selected; regular options are preserved but excluded. The sketch is uploaded in the chosen external generator. `AssistantLaunch.jsx` selects Chinese/English; ChatGPT uses URL-encoded `q` with clipboard fallback, Gemini must finish copying before navigating and offers a manual link if popups are blocked. `CopyButton.jsx` reports clipboard failures for previews and saved prompts.
+
+**Cat series:** All 100 style images, 120 subjects and 120 raster details use the same quirky orange-cat mascot (36 detail images were already generated). Subjects use costume/shape variations; prompt subject text remains unchanged. The 24 composition/ratio SVGs retain precise diagrams. `scripts/import-cat-series.py` imports completed built-in imagegen jobs from ignored `.cat-generation/` while preserving original PNGs and generation manifests.
+
 **Wizard flow** — `App.jsx` orchestrates 6 steps in order:
 
 | Step | Component | Purpose |

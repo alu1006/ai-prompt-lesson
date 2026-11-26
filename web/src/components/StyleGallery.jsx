@@ -7,7 +7,7 @@ function StyleTile({ style, selected, onSelect }) {
     <button type="button" className={`style-tile${selected ? ' selected' : ''}`}
       aria-pressed={selected} onClick={() => onSelect(style)} title={style.name_en}>
       {failed ? <div className="style-image-error">圖片暫時無法載入<br />仍可選擇此風格</div> :
-        <img src={style.image} alt={`${style.name_zh}示範：坐姿貓與盆栽`}
+        <img src={style.image} alt={`${style.name_zh}示範：拿著鉛筆的搞怪橘貓`}
           className="style-tile-img" width="768" height="768" loading="lazy" decoding="async"
           onError={() => setFailed(true)} />}
       <div className="style-tile-info">

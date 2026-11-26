@@ -16,5 +16,5 @@ for (const style of INTUITIVE_STYLES) {
 }
 fs.writeFileSync(path.join(output, '100-styles.csv'), '\uFEFF' + rows.map(row => row.map(cell).join(',')).join('\r\n'))
 fs.copyFileSync(path.join(root, 'web/public/style-previews/v2/generation.json'), path.join(output, 'generation.json'))
-fs.writeFileSync(path.join(output, 'README.txt'), '100 種風格參考配圖\n\nimages/：100 張獨立 AI 生成配圖（WebP）。\n100-styles.csv：分類、風格名稱、辨識特徵與英文提示詞，可用 Excel 開啟。\ngeneration.json：每張圖片的實際生成提示詞與來源檔名。\n\n配圖固定以坐姿貓與盆栽比較不同媒材、技法與畫面語言。生成式 AI 仍會帶來姿勢、比例與構圖差異；圖片是教學示意，並非工藝製程或藝術流派的唯一標準。\n')
+fs.writeFileSync(path.join(output, 'README.txt'), '100 種風格參考配圖\n\nimages/：100 張獨立 AI 生成配圖（WebP）。\n100-styles.csv：分類、風格名稱、辨識特徵與英文提示詞，可用 Excel 開啟。\ngeneration.json：每張圖片的實際生成提示詞與來源檔名。\n\n配圖固定以拿著鉛筆的搞怪橘貓比較不同媒材、技法與畫面語言。生成式 AI 仍會帶來姿勢、比例與構圖差異；圖片是教學示意，並非工藝製程或藝術流派的唯一標準。\n')
 console.log(`Exported ${INTUITIVE_STYLES.length} styles to ${output}`)

@@ -1,8 +1,10 @@
 import { DETAIL_CATEGORIES } from '../data/detailOptions.js'
 import { subjectEnglish } from '../data/subjectPresets.js'
 import { palettePrompt } from './palette.js'
+import { TURNAROUND_PROMPT, isTurnaround } from '../data/turnaroundPrompt.js'
 
 export function selectionTags(selection) {
+  if (isTurnaround(selection)) return [{ label: '用途', value: '角色三視圖' }, { label: '參考', value: '上傳的手繪草圖' }]
   return [
     selection.subject && { label: '主體', value: selection.subject },
     ...(selection.styles || []).map(style => ({ label: '風格', value: style.label_zh })),
@@ -13,6 +15,7 @@ export function selectionTags(selection) {
 }
 
 export function buildPrompts(selection) {
+  if (isTurnaround(selection)) return { ...TURNAROUND_PROMPT }
   const { subject, styles = [], product } = selection
   const zh = [], en = []
   if (subject) { zh.push(subject); en.push(subjectEnglish(subject)) }

@@ -1,5 +1,11 @@
 const PRODUCTS = [
   {
+    id: 'turnaround',
+    name_zh: '角色三視圖',
+    icon: '✎',
+    prompt_en: '',
+  },
+  {
     id: 'tshirt',
     name_zh: 'T恤',
     icon: '👕',
@@ -61,8 +67,8 @@ export default function ProductStep({ selected, onSelect, onNext, onPrev }) {
   return (
     <div className="wizard-step-page">
       <div className="step-heading">
-        <h2>選擇產品</h2>
-        <p>要把這張圖印在什麼上？AI 會自動調整 Prompt 讓圖片適合製作成產品（去背、適合印刷）</p>
+        <h2>產品／用途</h2>
+        <p>把圖案做成產品，或將手繪草圖整理成同一角色的正面、側面與背面設定圖。</p>
       </div>
 
       <div className="product-grid">
@@ -76,13 +82,15 @@ export default function ProductStep({ selected, onSelect, onNext, onPrev }) {
             >
               <span className="product-icon">{p.icon}</span>
               <span className="product-name">{p.name_zh}</span>
+              {p.id === 'turnaround' && <span className="product-purpose-hint">手繪草圖 → 正面・側面・背面</span>}
               {isSelected && <span className="product-check">✓</span>}
             </button>
           )
         })}
       </div>
 
-      {selected && selected.id !== 'none' && (
+      {selected?.id === 'turnaround' && <div className="turnaround-note"><strong>保留你的原創角色，整理成三個視角</strong><p>使用你提供的三視圖範本，保留草圖的比例、五官、服裝、道具與手繪感，三個視角並排在白色背景。</p><ol><li>準備清楚完整的手繪草圖。</li><li>下一步複製三視圖 Prompt，到生成工具上傳草圖並貼上文字。</li><li>檢查三個視角的比例與特徵；草圖沒畫出的側面、背面細節，可補充說明。</li></ol><p>三視圖使用獨立範本；前面選的主體、風格、配色與細節會保留，但不加入此範本。</p></div>}
+      {selected && !['none','turnaround'].includes(selected.id) && (
         <div className="selected-style-bar">
           已選：<strong>{selected.name_zh}</strong> — Prompt 會加入去背與印刷優化
         </div>

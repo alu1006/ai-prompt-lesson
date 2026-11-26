@@ -1,19 +1,4 @@
-import { useState } from 'react'
-
-function CopyButton({ text }) {
-  const [copied, setCopied] = useState(false)
-  const copy = () => {
-    navigator.clipboard.writeText(text).then(() => {
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    })
-  }
-  return (
-    <button className="btn-copy" onClick={copy}>
-      {copied ? '✓ 已複製' : '複製'}
-    </button>
-  )
-}
+import CopyButton from './CopyButton.jsx'
 
 export const DEMO_PROMPTS = [
   {
