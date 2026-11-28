@@ -6,7 +6,7 @@ export default function AccountControls({ member, localCount, onImport, importNo
         <p><strong>{member.user.displayName || 'CodingLu 使用者'}</strong> · {member.cloudReady ? '目前使用帳號收藏' : '正在讀取帳號收藏…'}</p>
         <div className="member-actions">
           <button type="button" disabled={member.busy} onClick={() => void member.logout()}>登出</button>
-          <a href="https://codinglu.tw/account">主站我的收藏</a>
+          <a href="https://codinglu.tw/account">主站會員中心</a>
           {localCount > 0 && <button type="button" disabled={member.busy || !member.cloudReady} onClick={onImport}>{member.busy ? '處理中…' : `匯入本機 ${localCount} 則收藏到此帳號`}</button>}
         </div>
         {localCount > 0 && <p className="member-hint">匯入只複製到目前帳號，保留本機原檔；重複提示詞不會新增第二份。</p>}

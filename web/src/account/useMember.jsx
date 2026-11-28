@@ -20,7 +20,7 @@ import {
 import { normalizePrompt, promptId, memberError } from "./model.mjs";
 
 // Same Firebase project + schema on both origins. Tokens stay in Firebase Auth.
-export function useMember(config) {
+export function useMember(config, loadFavorites = true) {
   const configured = Boolean(
     config.apiKey && config.authDomain && config.projectId && config.appId,
   );
@@ -60,7 +60,7 @@ export function useMember(config) {
           setLoadedUid(null);
           setError("");
           setAuthReady(true);
-          if (!nextUser) return;
+          if (!nextUser || !loadFavorites) return;
           const uid = nextUser.uid;
           stopFavorites = onSnapshot(
             collection(db, "users", uid, "favorites"),
@@ -104,6 +104,7 @@ export function useMember(config) {
     }
   }, [
     configured,
+    loadFavorites,
     config.apiKey,
     config.authDomain,
     config.projectId,
