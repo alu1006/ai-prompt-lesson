@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react'
+import { useMember } from './account/useMember.jsx'
+import AccountControls from './account/AccountControls.jsx'
+import './account/member.css'
 import SavedPromptsPage from './components/SavedPromptsPage.jsx'
 import IntroStep from './components/steps/IntroStep.jsx'
 import SubjectStep from './components/steps/SubjectStep.jsx'
@@ -10,6 +13,12 @@ import { DEFAULT_PALETTE } from './utils/palette.js'
 import { EMPTY_DETAILS } from './data/detailOptions.js'
 import AtelierHero from './components/AtelierHero.jsx'
 
+const MEMBER_CONFIG = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || '',
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || '',
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || '',
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || '',
+}
 const STEPS = [
   { id: 'intro',   label: '關於 AI', en: 'ABOUT AI' },
   { id: 'subject', label: '主體', en: 'SUBJECT' },
@@ -33,21 +42,46 @@ export default function App() {
   const [palette, setPalette] = useState(DEFAULT_PALETTE)
   const [product, setProduct] = useState(null)
   const [showSaved, setShowSaved] = useState(false)
-  const [savedPrompts, setSavedPrompts] = useState(() => {
-    try { return JSON.parse(localStorage.getItem('savedPrompts') || '[]') } catch { return [] }
+  const member = useMember(MEMBER_CONFIG)
+  const [localPrompts, setLocalPrompts] = useState(() => {
+    try {
+      const stored = JSON.parse(localStorage.getItem('savedPrompts') || '[]')
+      return Array.isArray(stored) ? stored.filter(p => p && typeof p.id === 'string' && typeof p.prompt_en === 'string' && Array.isArray(p.tags)) : []
+    } catch { return [] }
   })
+  const [localError, setLocalError] = useState('')
+  const [importNotice, setImportNotice] = useState('')
+  const savedPrompts = member.user ? member.favorites : localPrompts
+  useEffect(() => { setImportNotice(''); setLocalError('') }, [member.user?.uid])
 
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [step])
 
-  const savePrompt = (entry) => {
-    const updated = [entry, ...savedPrompts]
-    setSavedPrompts(updated)
-    localStorage.setItem('savedPrompts', JSON.stringify(updated))
+  const savePrompt = async (entry) => {
+    setLocalError('')
+    if (member.configured && !member.authReady) { setLocalError('正在確認登入狀態，請稍後再收藏。'); return false }
+    if (member.user) {
+      if (!member.cloudReady) { setLocalError('雲端收藏尚未載入，請稍後重試。'); return false }
+      return member.save(entry)
+    }
+    try {
+      const updated = [entry, ...localPrompts]
+      localStorage.setItem('savedPrompts', JSON.stringify(updated))
+      setLocalPrompts(updated)
+      return true
+    } catch { setLocalError('無法保存本機收藏，請檢查瀏覽器儲存空間。'); return false }
   }
-  const deletePrompt = (id) => {
-    const updated = savedPrompts.filter(p => p.id !== id)
-    setSavedPrompts(updated)
-    localStorage.setItem('savedPrompts', JSON.stringify(updated))
+  const deletePrompt = async (id) => {
+    if (member.user) return member.remove(id)
+    try {
+      const updated = localPrompts.filter(p => p.id !== id)
+      localStorage.setItem('savedPrompts', JSON.stringify(updated))
+      setLocalPrompts(updated)
+      return true
+    } catch { setLocalError('刪除未完成，請檢查瀏覽器儲存設定。'); return false }
+  }
+  const importLocal = async () => {
+    setImportNotice('')
+    if (await member.importPrompts(localPrompts)) setImportNotice('本機收藏已匯入目前帳號；原本的本機收藏仍保留。')
   }
 
   useEffect(() => {
@@ -72,6 +106,9 @@ export default function App() {
       {showSaved && (
         <SavedPromptsPage
           userPrompts={savedPrompts}
+          storageLabel={member.user ? '帳號收藏（雲端）' : '本機收藏（此瀏覽器）'}
+          busy={member.busy || Boolean(member.user && !member.cloudReady)}
+          error={member.error || localError}
           onDelete={deletePrompt}
           onClose={() => setShowSaved(false)}
         />
@@ -111,6 +148,8 @@ export default function App() {
         </button>
       </header>
 
+      <AccountControls member={member} localCount={localPrompts.length} onImport={importLocal} importNotice={importNotice} />
+      {localError && <p className="member-controls" role="alert">{localError}</p>}
       {step === 0 && <AtelierHero onBegin={() => goTo(1)} />}
 
       {/* ── Step content ── */}
@@ -158,6 +197,8 @@ export default function App() {
             selection={selection}
             onPrev={prev}
             onSave={savePrompt}
+            accountKey={member.user?.uid || 'guest'}
+            storageLabel={member.user ? '帳號' : '本機'}
           />
         )}
       </main>

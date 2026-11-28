@@ -4,13 +4,18 @@ import { isTurnaround } from '../../data/turnaroundPrompt.js'
 import AssistantLaunch from '../AssistantLaunch.jsx'
 import CopyButton from '../CopyButton.jsx'
 
-export default function PromptStep({ selection, onPrev, onSave }) {
-  const [saved, setSaved] = useState(false)
+export default function PromptStep({ selection, onPrev, onSave, accountKey, storageLabel = '本機' }) {
+  const [savedKey, setSavedKey] = useState('')
+  const [saving, setSaving] = useState(false)
   const { zh, en } = buildPrompts(selection)
   const turnaround = isTurnaround(selection)
 
-  const handleSave = () => {
-    onSave({
+  const currentKey = JSON.stringify([accountKey, zh, en])
+  const saved = savedKey === currentKey
+  const handleSave = async () => {
+    setSaving(true)
+    const key = currentKey
+    const success = await onSave({
       id: `user-${Date.now()}`,
       title: turnaround ? '手繪角色三視圖' : selection.subject || '我的 Prompt',
       tags: selectionTags(selection),
@@ -19,7 +24,8 @@ export default function PromptStep({ selection, onPrev, onSave }) {
       palette: selection.palette,
       selection,
     })
-    setSaved(true)
+    if (success) setSavedKey(key)
+    setSaving(false)
   }
 
   const tags = selectionTags(selection)
@@ -77,8 +83,8 @@ export default function PromptStep({ selection, onPrev, onSave }) {
 
       <div className="step-nav">
         <button className="btn-prev" onClick={onPrev}>← 返回產品／用途</button>
-        <button className="btn-next" onClick={handleSave} disabled={saved}>
-          {saved ? '✓ 已收藏' : '收藏此 Prompt'}
+        <button className="btn-next" onClick={handleSave} disabled={saved || saving}>
+          {saving ? '收藏中…' : saved ? `✓ 已收藏到${storageLabel}` : `收藏到${storageLabel}`}
         </button>
       </div>
     </div>

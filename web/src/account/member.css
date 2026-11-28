@@ -1,0 +1,10 @@
+.member-controls { max-width: 1320px; margin: 1rem auto; padding: 1rem 1.25rem; background: #fff; border: 2px solid #292621; border-radius: 14px; color: #292621; font-size: 1rem; line-height: 1.7; }
+.member-controls p { margin: 0; }
+.member-controls .member-hint { margin-top: .65rem; font-size: .875rem; }
+.member-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin-top: .75rem; }
+.member-actions button, .member-actions a { border: 1px solid #292621; background: #fff; color: #292621; padding: .5rem .8rem; border-radius: 8px; font: inherit; font-size: .875rem; text-decoration: none; cursor: pointer; }
+.member-actions button:disabled { opacity: .5; cursor: wait; }
+.member-actions :focus-visible { outline: 3px solid #1768c9; outline-offset: 3px; }
+.member-controls [role=alert] { margin-top: .75rem; color: #a21919; }
+.saved-storage-label { padding: 0 1.5rem; font-size: .875rem; color: #59554e; }
+@media(max-width:700px) { .member-controls { margin: .75rem 1rem; } }

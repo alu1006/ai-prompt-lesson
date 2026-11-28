@@ -31,3 +31,5 @@ output/
 !animation/package.json
 !animation/package-lock.json
 !animation/tsconfig.json
+
+!web/.env.example

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import CopyButton from './CopyButton.jsx'
 
 export const DEMO_PROMPTS = [
@@ -17,7 +18,8 @@ export const DEMO_PROMPTS = [
   },
 ]
 
-export default function SavedPromptsPage({ userPrompts, onDelete, onClose }) {
+export default function SavedPromptsPage({ userPrompts, onDelete, onClose, storageLabel, busy, error }) {
+  const [removing, setRemoving] = useState(null)
   const all = [...DEMO_PROMPTS, ...userPrompts]
 
   return (
@@ -25,9 +27,11 @@ export default function SavedPromptsPage({ userPrompts, onDelete, onClose }) {
       <div className="saved-panel">
         <div className="saved-header">
           <h2>收藏的 Prompt</h2>
-          <button className="saved-close" onClick={onClose}>✕</button>
+          <button className="saved-close" aria-label="關閉收藏" onClick={onClose}>✕</button>
         </div>
 
+        <p className="saved-storage-label">{storageLabel} · {userPrompts.length} 則個人收藏；示範不計入。</p>
+        {error && <p className="saved-storage-label" role="alert">{error}</p>}
         {all.length === 0 ? (
           <div className="saved-empty">還沒有收藏，去做一個 Prompt 試試！</div>
         ) : (
@@ -40,7 +44,7 @@ export default function SavedPromptsPage({ userPrompts, onDelete, onClose }) {
                     {p.isDemo && <span className="saved-demo-badge">示範</span>}
                   </div>
                   {!p.isDemo && (
-                    <button className="saved-delete" onClick={() => onDelete(p.id)}>刪除</button>
+                    <button className="saved-delete" disabled={busy || removing === p.id} onClick={async () => { setRemoving(p.id); try { await onDelete(p.id) } finally { setRemoving(null) } }}>{removing === p.id ? '處理中…' : '移除收藏'}</button>
                   )}
                 </div>
 
@@ -49,7 +53,7 @@ export default function SavedPromptsPage({ userPrompts, onDelete, onClose }) {
                 )}
 
                 <div className="saved-tags">
-                  {p.tags.map(t => (
+                  {p.tags.filter(t => t && typeof t.label === 'string' && typeof t.value === 'string').map(t => (
                     <span key={`${t.label}-${t.value}`} className="prompt-tag">
                       <span className="prompt-tag-label">{t.label}</span>
                       <span className="prompt-tag-value">{t.value}</span>
@@ -57,6 +61,10 @@ export default function SavedPromptsPage({ userPrompts, onDelete, onClose }) {
                   ))}
                 </div>
 
+                {p.prompt_zh && <div className="saved-prompt-block">
+                  <CopyButton text={p.prompt_zh} />
+                  <p className="saved-prompt-text">{p.prompt_zh}</p>
+                </div>}
                 <div className="saved-prompt-block">
                   <CopyButton text={p.prompt_en} />
                   <p className="saved-prompt-text">{p.prompt_en}</p>
